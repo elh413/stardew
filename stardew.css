@@ -1,1837 +1,539 @@
-@media only screen and (max-width: 800px)
-{
-		/*--------------------TOOLTIPS--------------------*/
-		:root
-		{
-			--Left-TextBoxes-Width: 388px;
-			--TextBox-Border-Main-1: #fb9e00;
-			--TextBox-Border-Main-2: #e08700;
-			--TextBox-Border-Dark: #5b2b2a;
-			--TextBox-Border-Medium-1: #903e01;
-			--TextBox-Border-Medium-2: #ba5901;
-			--TextBox-Border-Light: #f7ba00;
-			--TextBox-Border-Shadow: #cb8652;
-			--TextBox-Border-Size: 3px;
-			--TextBox-Background: #ffcd82;
-			--TextBox-Background-Gradient-1: #ffcd82;
-			--TextBox-Background-Gradient-2: #eeb272;
-			--TextBox-Text-Vertical-Padding: 12px;
-			--TextBox-Text-Side-Padding: 15px;
-			--TextBox-Text-Color: #000;
-			--TextBox-Text-Shadow: #d7864f;
-			--TextBox-Link-Color: #a5682a;
-			--TitleBox-Text-Font-Size: 18px;
-			--TitleBox-Text-Line-Height: 1em;
-			--Bio-Box-Font-Size: 21px;
-			--Bio-Box-Line-Height: 1.1em;
-			--Bio-Box-Maximum-Height: auto;
-			--Scrollbar-Thumb: transparent;
-			--Sidebar-Width: 120px;
-			--Music-Controls-Size: 12px;
-			--Music-Title-Font-Size: 15px;
-			--Sidebar-Image-Width: 85px;
-			--Desc-Box-Font-Size: 17px;
-			--Desc-Box-Line-Height: 1.25em;
-		}
-		/*?????????*/
-		body
-		{
-			font-weight: bolder;
-			color: #FFFFFF;
-		}
-		::-webkit-scrollbar
-		{
-			width: 10px;
-			height: 10px;
-		}
-		::-webkit-scrollbar-thumb
-		{
-			background: rgba(90, 90, 90, 0.5);
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		::-webkit-scrollbar-track
-		{
-			background: rgba(0, 0, 0, 0.2);
-			border: 4px solid transparent;
-			background-clip: content-box;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754679267475486/Stardew-Valley-Cursor.png"), auto;
-		}
-		#page__rendertime
-		{
-			display: none;
-		}
-		body
-		{
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754679267475486/Stardew-Valley-Cursor.png"), auto;
-		}
-		.py-4
-		{
-			display: flex;
-			align-items: center;
-		}
-		.bodybg
-		{
-			background-size: auto;
-			background-image: url(https://i.redd.it/amfzanxbvw621.png);
-			background-attachment: fixed;
-		}
-		h2
-		{
-			color: var(--TextBox-Link-Color);
-		}
-		.gifts-page__gifts-item
-		{
-			text-align: center;
-			background-image: linear-gradient(to bottom, var(--TextBox-Background-Gradient-1), var(--TextBox-Background-Gradient-2));
-			margin-left: 20px;
-			border: 6px solid transparent;
-			border-image: url(https://i1.beon.fun/55/16/1655/17/611917/scrollborder.png) 24 fill repeat;
-			border-image-width: 28px;
-			border-image-outset: 9px;
-			padding: 18px 0px 18px 0px;
-			margin-top: 20px;
-			margin-bottom: 16px;
-			max-height: 100px;
-			max-width: 150px;
-			font-size: 0px;
-		}
-		.gifts-page__gifts-item:active
-		{
-			text-align: center;
-			background-image: linear-gradient(to bottom, var(--TextBox-Background-Gradient-1), var(--TextBox-Background-Gradient-2));
-			margin-left: 20px;
-			border: 6px solid transparent;
-			border-image: url(https://i1.beon.fun/55/16/1655/17/611917/scrollborder.png) 24 fill repeat;
-			border-image-width: 28px;
-			border-image-outset: 9px;
-			padding: 18px 0px 18px 0px;
-			margin-top: 20px;
-			margin-bottom: 16px;
-			max-height: 600px;
-			font-size: 12px;
-			max-width: 150px;
-		}
-		.post-title-user
-		{
-			margin-right: 0px;
-			padding-top: 0px;
-			font-size: 19px;
-			font-weight: bolder;
-			line-height: 55px;
-		}
-		a.user.post-title-user:hover
-		{
-			margin-right: 0px;
-			padding-top: 0px;
-			font-size: 19px;
-			font-weight: bolder;
-			color: rgb(235, 118, 71);
-			text-decoration: none;
-			font-weight: bolder;
-		}
-		div.blog__read-me, div.blog__last-comments, div.blog__iread
-		{
-			display: none;
-		}
-		.textareabg
-		{
-			border-image: url(https://i1.beon.fun/55/16/1655/35/596735/image-9.png) 24 fill repeat;
-			border-image-width: 24px;
-			border-image-outset: 6px;
-			padding: 0px 18px 0px 18px;
-			margin-top: 20px;
-			margin-bottom: 20px;
-			text-shadow: 0px 2px 1px #D5864F;
-			margin-left: 0;
-			margin-right: 0px;
-			background-color: #ffffff00;
-			filter: brightness(0.95) sepia(30%) saturate(80%);
-		}
-		.modal-content
-		{
-			position: relative;
-			display: flex;
-			flex-direction: column;
-			width: 100%;
-			pointer-events: auto;
-			background-image: linear-gradient(to bottom, var(--TextBox-Background-Gradient-1), var(--TextBox-Background-Gradient-2));
-			box-shadow: rgb(144 62 1) 0px -3px, rgb(144 62 1) 0px 3px, rgb(144 62 1) 3px 0px, rgb(144 62 1) -3px 0px, rgb(144 62 1) -3px 0px, rgb(144 62 1) -3px 3px, rgb(144 62 1) -3px -3px, rgb(144 62 1) 3px -3px, rgb(144 62 1) 3px 3px, rgb(186 90 1) -3px -6px, rgb(186 90 1) 0px -6px, rgb(224 135 0) 3px -6px, rgb(186 90 1) 6px 0px, rgb(224 135 0) 6px -3px, rgb(186 90 1) 6px 3px, rgb(224 135 0) 0px 6px, rgb(186 90 1) 3px 6px, rgb(144 62 1) 6px 6px, rgb(186 90 2) -3px 6px, rgb(224 135 0) -6px 3px, rgb(144 62 1) -6px 6px, rgb(224 135 0) -6px 0px, rgb(186 90 1) -6px -3px, rgb(144 62 1) -6px -6px, rgb(144 62 1) 6px -6px, rgb(224 135 0) 6px -9px, rgb(224 135 0) 3px -9px, rgb(186 90 2) -6px -9px, rgb(91 43 42) 0px -12px, rgb(91 43 42) -6px -12px, rgb(91 43 42) 6px -12px, rgb(186 90 2) 0px 9px, rgb(186 90 2) -6px 9px, rgb(186 90 2) 6px 9px, rgb(186 90 2) -9px 6px, rgb(144 62 1) -9px 9px, rgb(186 90 2) -9px -6px, rgb(91 43 42) 0px 12px, rgb(91 43 42) 6px 12px, rgb(91 43 42) -6px 12px, rgb(144 62 1) -9px -9px, rgb(91 43 42) -12px 0px, rgb(91 43 42) -12px -6px, rgb(91 43 42) -12px 6px, rgb(224 135 0) 9px 0px, rgb(224 135 0) 9px 3px, rgb(186 90 2) 9px 6px, rgb(144 62 1) 9px 9px, rgb(224 135 0) 9px -6px, rgb(144 62 1) 9px -9px, rgb(91 43 42) 12px 6px, rgb(91 43 42) 12px -6px;
-			border-right: calc(var(--TextBox-Border-Size) * 2) solid var(--TextBox-Border-Shadow);
-			border-top: calc(var(--TextBox-Border-Size) * 2) solid var(--TextBox-Border-Shadow);
-			/* background-color: #fff; */
-			background-clip: padding-box;
-			border: 1px solid rgba(0, 0, 0, 0.2);
-			border-radius: 0.3rem;
-			outline: 0;
-		}
-		.btn-outline-primary
-		{
-			color: #A5682A;
-			background-color: transparent;
-			background-image: none;
-			border-color: #A5682A;
-		}
-		.btn-outline-primary:hover
-		{
-			color: #FFF;
-			background-color: #f8fafc00;
-			border-color: #A5682A;
-		}
-		.left-menu-text
-		{
-			color: var(--TextBox-Link-Color);
-			padding-left: 0px;
-		}
-		.post-row, .comment-row
-		{
-			display: flex;
-			padding: var(--TextBox-Text-Vertical-Padding) var(--TextBox-Text-Side-Padding);
-			box-sizing: border-box;
-			-webkit-box-sizing: border-box;
-			background-image: linear-gradient(to bottom, var(--TextBox-Background-Gradient-1), var(--TextBox-Background-Gradient-2));
-			border-right: calc(var(--TextBox-Border-Size) * 2) solid var(--TextBox-Border-Shadow);
-			border-top: calc(var(--TextBox-Border-Size) * 2) solid var(--TextBox-Border-Shadow);
-			overflow: auto;
-			box-shadow: rgb(144 62 1) 0px -3px, rgb(144 62 1) 0px 3px, rgb(144 62 1) 3px 0px, rgb(144 62 1) -3px 0px, rgb(144 62 1) -3px 0px, rgb(144 62 1) -3px 3px, rgb(144 62 1) -3px -3px, rgb(144 62 1) 3px -3px, rgb(144 62 1) 3px 3px, rgb(186 90 1) -3px -6px, rgb(186 90 1) 0px -6px, rgb(224 135 0) 3px -6px, rgb(186 90 1) 6px 0px, rgb(224 135 0) 6px -3px, rgb(186 90 1) 6px 3px, rgb(224 135 0) 0px 6px, rgb(186 90 1) 3px 6px, rgb(144 62 1) 6px 6px, rgb(186 90 2) -3px 6px, rgb(224 135 0) -6px 3px, rgb(144 62 1) -6px 6px, rgb(224 135 0) -6px 0px, rgb(186 90 1) -6px -3px, rgb(144 62 1) -6px -6px, rgb(144 62 1) 6px -6px, rgb(224 135 0) 6px -9px, rgb(224 135 0) 3px -9px, rgb(186 90 2) -6px -9px, rgb(91 43 42) 0px -12px, rgb(91 43 42) -6px -12px, rgb(91 43 42) 6px -12px, rgb(186 90 2) 0px 9px, rgb(186 90 2) -6px 9px, rgb(186 90 2) 6px 9px, rgb(186 90 2) -9px 6px, rgb(144 62 1) -9px 9px, rgb(186 90 2) -9px -6px, rgb(91 43 42) 0px 12px, rgb(91 43 42) 6px 12px, rgb(91 43 42) -6px 12px, rgb(144 62 1) -9px -9px, rgb(91 43 42) -12px 0px, rgb(91 43 42) -12px -6px, rgb(91 43 42) -12px 6px, rgb(224 135 0) 9px 0px, rgb(224 135 0) 9px 3px, rgb(186 90 2) 9px 6px, rgb(144 62 1) 9px 9px, rgb(224 135 0) 9px -6px, rgb(144 62 1) 9px -9px, rgb(91 43 42) 12px 6px, rgb(91 43 42) 12px -6px;
-			filter: brightness(0.95) sepia(30%) saturate(80%);
-			overflow: hidden;
-		}
-		div.post-content.blog_total_counter
-		{
-			display: none;
-		}
-		.post-text, .comment-text
-		{
-			word-break: break-word;
-			margin-top: 0px;
-			font-family: aseprite;
-			line-height: 25px;
-			font-size: 17px;
-			letter-spacing: 0.3px;
-			line-height: var(--Bio-Box-Line-Height);
-			/* max-height: var(--Bio-Box-Maximum-Height); */
-			overflow: hidden;
-			color: var(--TextBox-Text-Color);
-			text-shadow: -1px 1px 1px var(--TextBox-Text-Shadow);
-		}
-		img.flag
-		{
-			height: 30px;
-			aspect-ratio: auto 30 / 30;
-			width: 30px;
-			content: url(https://stardewcommunitywiki.com/mediawiki/images/thumb/2/2b/Emojis110.png/24px-Emojis110.png);
-			vertical-align: text-bottom;
-			margin-left: -5px;
-		}
-		.likebutton
-		{
-			color: #979696;
-			transition: color 0.5s ease;
-			width: 14px;
-			/* opacity: 60%; */
-			content: url(https://i1.beon.fun/55/16/1655/18/596618/image.png);
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		.likebutton
-		{
-			color: #979696;
-			transition: color 0.5s ease;
-			width: 14px;
-			content: url(https://i1.beon.fun/55/16/1655/18/596618/image.png);
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		.liked, .reposted, .bookmarked
-		{
-			color: #FF0000 !important;
-			content: url(https://i1.beon.fun/55/16/1655/4/596704/image-1.png);
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		.fa-retweet:before
-		{
-			content: "";
-		}
-		.fa-retweet:after
-		{
-			content: url(https://i1.beon.fun/55/16/1655/7/596707/image-5.png);
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		[href$="/edit"]
-		{
-			content: "";
-			text-decoration: unset;
-			font-size: 0px;
-		}
-		[href$="/edit"]::after
-		{
-			content: url(https://i1.beon.fun/55/16/1655/5/603905/image-3.png);
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-			text-decoration: unset;
-		}
-		a[href^="//beon.fun/repost/comment/"]
-		{
-			font-size: 0px;
-			text-decoration: unset;
-		}
-		a[href^="//beon.fun/repost/comment/"]::after
-		{
-			content: url(https://i1.beon.fun/55/16/1655/7/596707/image-5.png);
-			text-decoration: unset;
-			font-size: 0px;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		a[href^="//beon.fun/repost/post/"]
-		{
-			font-size: 0px;
-			text-decoration: unset;
-		}
-		a[href^="//beon.fun/repost/post/"]::after
-		{
-			content: url(https://i1.beon.fun/55/16/1655/7/596707/image-5.png);
-			font-size: 0px;
-			text-decoration: unset;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		.fa-heart:before
-		{
-			content: "";
-		}
-		.fa-heart:after
-		{
-			content: url(https://i1.beon.fun/55/16/1655/16/601716/image-6-1.png);
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		.fa-bookmark:before
-		{
-			content: "";
-		}
-		.fa-bookmark:after
-		{
-			content: url(https://i1.beon.fun/55/16/1655/31/596731/image-8.png);
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		.fa-trash-alt:before
-		{
-			content: "";
-		}
-		.fa-trash-alt:after
-		{
-			content: url(https://i1.beon.fun/55/16/1655/5/596705/image-2.png);
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		.fa-exclamation-triangle:before
-		{
-			content: "";
-		}
-		.fa-exclamation-triangle:after
-		{
-			content: url(https://i1.beon.fun/55/16/1655/30/596730/image-7.png);
-		}
-		span[data-target="#deleteconfirmmodal"]
-		{
-			color: #3490DC;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-			content: "";
-			font-size: 0px;
-		}
-		span[data-target="#deleteconfirmmodal"]:after
-		{
-			color: #3490DC;
-			content: url(https://i1.beon.fun/55/16/1655/5/596705/image-2.png);
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-			font-size: 0px;
-		}
-		label.menu__btn
-		{
-			margin-top: -10px !important;
-		}
-		.hamburger-menu
-		{
-			display: none;
-		}
-		.hamburger-menu
-		{
-			display: inline-block;
-		}
-		#menu__toggle
-		{
-			opacity: 0;
-			display: none;
-		}
-		div.container
-		{
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			flex-direction: column-reverse;
-		}
-		html>body.bodybg>#app>nav.navbar.navbar-expand-md.navbar-light.bg-white.shadow-sm>div.container>div:nth-of-type(2)>label.menu__btn
-		{
-			background-image: url(https://i1.beon.fun/55/16/1655/87/628187/image.png);
-			background-size: contain;
-			background-repeat: no-repeat;
-			height: 90px;
-			width: 45px;
-			margin-bottom: 15px;
-			margin-left: -180px;
-		}
-		#app > nav > div > a
-		{
-			content: url(https://i1.beon.fun/55/16/1655/14/627614/image.png);
-			font-size: 0px;
-			margin-bottom: 100px;
-			z-index: 1;
-		}
-		.menu__btn > span, .menu__btn > span::before, .menu__btn > span::after
-		{
-			display: none;
-			position: absolute;
-			width: 100%;
-			height: 2px;
-			background-color: #616161;
-			transition-duration: 0.25s;
-		}
-		.navbar-light .navbar-brand, .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand
-		{
-			color: rgba(0, 0, 0, 0.9);
-			font-size: 0px;
-			content: url(https://i1.beon.fun/89/15/1589/75/595575/STVBEON.png);
-			width: 287px;
-			border: 6px solid transparent;
-			border-image: url(https://i1.beon.fun/55/16/1655/8/596908/snapedit_1678917740682-PhotoRoom.png-PhotoRoom-1.png) 24 fill repeat;
-			border-image-width: 24px;
-			border-image-outset: 6px;
-			padding: 0px 18px 0px 18px;
-			margin-top: -87px;
-			margin-bottom: 16px;
-			text-shadow: 0px 2px 1px #D5864F;
-			font-size: 30px;
-			margin-left: auto;
-			margin-right: auto;
-		}
-		div.crumbs
-		{
-			display: flex;
-			justify-content: space-around;
-			align-items: center;
-			flex-direction: column;
-			align-content: stretch;
-			height: 76px;
-			flex-wrap: nowrap;
-			margin-top: -60px;
-			margin-bottom: 20px;
-			font-size: 0px;
-		}
-		.pagination, .crumbs [href="/"]
-		{
-			top: 469px;
-			left: 233px;
-			border-radius: unset;
-			height: 100px;
-			font-size: 0px;
-		}
-		.pagination
-		{
-			display: flex;
-			padding-left: 0;
-			list-style: none;
-			border-radius: 0.25rem;
-		}
-		.pagination a:last-child
-		{
-			overflow: hidden;
-			font-size: 0px;
-			display: block;
-			height: 76px;
-			bottom: 0;
-			transition: 0.2s;
-		}
-		#app > div:nth-child(2) > div > a
-		{
-			text-decoration: none;
-			padding-right: 15px;
-			margin-bottom: 0px;
-		}
-		.pagination a:last-child:before
-		{
-			content: url(https://i1.beon.fun/55/16/1655/24/605424/image.png);
-			font-family: 'Font Awesome 5 Free';
-			font-size: 0px;
-			position: absolute;
-			margin-top: 16px;
-			margin-left: 50px;
-		}
-		span.pagination-goto+a:before
-		{
-			content: url(https://i1.beon.fun/55/16/1655/11/605511/image.png);
-			font-family: 'Font Awesome 5 Free';
-			font-size: 0px;
-			position: absolute;
-			margin-top: 16px;
-		}
-		html > body.bodybg > #app > nav.navbar.navbar-expand-md.navbar-light.bg-white.shadow-sm
-		{
-			width: 100%;
-			background-size: cover;
-			background-repeat: no-repeat;
-			margin-left: 0px;
-			height: 100%;
-			background-color: #f5f5dc00;
-		}
-		.menu__box
-		{
-			z-index: 1;
-			display: block;
-			position: fixed;
-			visibility: hidden;
-			top: 0;
-			right: -10%;
-			width: 300px;
-			height: 100%;
-			margin: 0;
-			padding: 40px 0;
-			list-style: none;
-			background-color: #ECEFF1;
-			box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
-			transition-duration: 0.25s;
-		}
-		#menu__toggle:checked ~ .menu__box
-		{
-			visibility: visible;
-			right: 0;
-			height: auto;
-			background-image: url(https://i1.beon.fun/55/16/1655/78/596478/image.png);
-			background-size: cover;
-			background-color: #ffffff00;
-			box-shadow: none;
-			align-items: center;
-			display: flex;
-			flex-direction: column;
-			max-height: 600px;
-			overflow-y: auto;
-		}
-		#menu__toggle:checked ~ label.menu__btn
-		{
-			background-image: url(https://i1.beon.fun/55/16/1655/11/595011/Golden_Scroll.png);
-			z-index: 2;
-		}
-		body > div:nth-child(2) > span
-		{
-			content: url(https://i1.beon.fun/55/16/1655/3/609103/ezgif-3-47a45a686a.gif);
-			font-size: 0px;
-		}
-		div.left-menu
-		{
-			font-family: "titlefont";
-			border: 0px;
-			margin-top: 10px;
-			overflow-y: hidden;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			background-color: #FFC677;
-			border: 6px solid transparent;
-			border-image: url(https://i1.beon.fun/55/16/1655/17/611917/scrollborder.png) 24 fill repeat;
-			border-image-width: 28px;
-			border-image-outset: 9px;
-			padding: 18px 0px 18px 0px;
-			border-right: calc(var(--TextBox-Border-Size) * 2) solid var(--TextBox-Border-Shadow);
-			border-top: calc(var(--TextBox-Border-Size) * 2) solid var(--TextBox-Border-Shadow);
-			width: 95%;
-		}
-		.right-menu-text
-		{
-			text-align: center;
-			padding-right: 55px;
-		}
-		.left-menu-text
-		{
-			color: var(--TextBox-Link-Color);
-		}
-		div.post-content.blog_total_counter
-		{
-			display: none;
-		}
-		div.blog__gifts > h3
-		{
-			display: none;
-		}
-		#app > main > div.left-menu > div.blog__gifts > div.right-menu-text > a
-		{
-			content: url(https://i1.beon.fun/55/16/1655/54/588354/image.png);
-			box-shadow: #D68F54 0px -4px, #FFDAA1 0px 4px, #D68F54 4px 0px, #FFDAA1 -4px 0px;
-			margin-top: 5px;
-			padding: 7px;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		.d-flex
-		{
-			display: flex !important;
-			flex-direction: column-reverse;
-			max-height: 0px;
-		}
-		.left-menu__gift
-		{
-			width: 25%;
-			padding: 3px;
-			text-align: center;
-			display: none;
-		}
-		.left-menu__friends_offline, .left-menu__friends, .left-menu__friends.left-menu__friends_offline
-		{
-			font-size: 0px;
-			max-height: 0px;
-			content: url();
-		}
-		#app > main > div.left-menu > div.blog__tags > h3
-		{
-			content: url(https://i1.beon.fun/55/16/1655/95/592895/Pierre-s_Missing_Stocklist.png);
-			margin-top: 4px;
-			box-shadow: #D68F54 0px -4px, #FFDAA1 0px 4px, #D68F54 4px 0px, #FFDAA1 -4px 0px;
-			padding: 7px;
-			margin-left: 43px;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		.blog__tags
-		{
-			width: 200px;
-			align-items: flex-end;
-			display: flex;
-			align-content: flex-end;
-			flex-direction: column;
-		}
-		div.left-menu__user-notification.left-menu__unread-notifications > h3
-		{
-			display: none;
-		}
-		#app > main > div.left-menu > div.left-menu__user-notification.left-menu__unread-notifications > div
-		{
-			content: url (https://stardewcommunitywiki.com/mediawiki/images/archive/c/c2/20181004023118%21Quests_Icon.png);
-		}
-		#app > main > div.left-menu > div.left-menu__user-notification.left-menu__friends > h3
-		{
-			display: none;
-		}
-		.left-menu__friends_offline > h3
-		{
-			display: none;
-		}
-		#app > main > div.left-menu > div.left-menu__friends.left-menu__friends_offline > div
-		{
-			display: none;
-		}
-		#app > main > div.left-menu > div.left-menu__friends.left-menu__friends_offline > p
-		{
-			display: none;
-		}
-		#app > main > div.left-menu > div.left-menu__user-notification.left-menu__friends > div > a
-		{
-			display: none;
-		}
-		#app > main > div.left-menu > div.left-menu__user-notification.left-menu__friends > div > a
-		{
-			content: url(https://i1.beon.fun/55/16/1655/99/588399/Krobus_Happy-1.png);
-		}
-		#app > main > div.left-menu > div.left-menu__user-notification.left-menu__friends > p
-		{
-			display: none;
-		}
-		div.blog__about > h3
-		{
-			content: url(https://stardewcommunitywiki.com/mediawiki/images/a/a5/Stardrop.png);
-			margin-left: 80px;
-			margin-top: 10px;
-			margin-top: 4px;
-			box-shadow: #D68F54 0px -4px, #FFDAA1 0px 4px, #D68F54 4px 0px, #FFDAA1 -4px 0px;
-			padding: 7px;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		div.left-menu__user-notification.left-menu__unread-message> h3
-		{
-			margin-top: 10px;
-			margin-top: 4px;
-			box-shadow: #D68F54 0px -4px, #FFDAA1 0px 4px, #D68F54 4px 0px, #FFDAA1 -4px 0px;
-			padding: 7px;
-			content: url(https://i1.beon.fun/55/16/1655/10/588610/Speech_bubble-1.png);
-			margin-left: 80px;
-			margin-right: 140px;
-			margin-bottom: 30px;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		#app > main > div.left-menu > div.left-menu__user-notification.left-menu__unread-message > p
-		{
-			max-width: 200px;
-		}
-		div.notifications__comments > h3
-		{
-			content: "";
-			display: none;
-		}
-		#app > main > div.left-menu > div.notifications__comments.left-menu__user-notification > div > a
-		{
-			content: url(https://i1.beon.fun/55/16/1655/20/592920/20181004023118-Quests_Icon.png);
-			margin-left: 5px;
-			margin-right: 7px;
-			margin-top: 10px;
-			margin-bottom: 10px;
-			margin-top: 4px;
-			box-shadow: #D68F54 0px -4px, #FFDAA1 0px 4px, #D68F54 4px 0px, #FFDAA1 -4px 0px;
-			padding: 7px;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		#app > main > div.left-menu > div.notifications__comments.left-menu__user-notification > p
-		{
-			display: none;
-		}
-		div.blog__read-me, div.blog__last-comments, div.blog__iread
-		{
-			max-height: 0px;
-			max-width: 0px;
-			z-index: -1;
-			font-size: 0px;
-		}
-		.blog__gifts, .blog__tags,.left-menu__user-notification, .left-menu__friends_offline, div.left-menu__user-notification, .left-menu__friends, .left-menu__friends.left-menu__friends_offline, div.left-menu__user-notification.left-menu__unread-message, div.notifications__comments, div.blog__about
-		{
-			max-height: 73px;
-			overflow: hidden;
-			transition: 0.1s;
-			transition-delay: 10s;
-		}
-		.blog__gifts:active, .blog__tags:active, .left-menu__user-notification:active,div.left-menu__user-notification.left-menu__unread-message:active, .left-menu__friends, .left-menu__friends_offline:active, div.left-menu__user-notification.left-menu__friends:active, .left-menu__friends.left-menu__friends_offline:active, div.notifications__comments:active, div.blog__about:active
-		{
-			max-height: 600px;
-			transition: 0.1s;
-		}
-		#app > main > div.left-menu > div.left-menu__user-notification.left-menu__unread-notifications > div > a
-		{
-			content: url(https://stardewcommunitywiki.com/mediawiki/images/6/63/DialogueBubbleLove.png);
-			margin-right: 60px;
-			margin-left: 5px;
-			margin-bottom: 10px;
-			margin-top: -12px;
-			box-shadow: #D68F54 0px -4px, #FFDAA1 0px 4px, #D68F54 4px 0px, #FFDAA1 -4px 0px;
-			padding: 7px;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		input
-		{
-			overflow: visible;
-			box-shadow: #D68F54 0px -2px, #FFDAA1 0px 2px, #D68F54 2px 0px, #FFDAA1 -2px 0px;
-			margin-left: 10px;
-			margin-bottom: 5px;
-			background-color: #FFC677;
-			border: 0px;
-		}
-		#app > main > div.left-menu > div.left-menu__user-notification.left-menu__unread-message > p
-		{
-			margin-top: 10px;
-			margin-bottom: 0rem;
-		}
-		.datebg
-		{
-			margin: 10px 10px 20px;
-			padding-left: 5px;
-			font-weight: bold;
-			color: #F4B744;
-			font-size: 120%;
-			text-shadow: 0px 2px 1px #D5864F;
-		}
-		a
-		{
-			color:var(--TextBox-Link-Color);
-			text-decoration: none;
-			-webkit-transition: all 0.1s ease-in-out;
-			-moz-transition: all 0.1s ease-in-out;
-			-o-transition: all 0.1s ease-in-out;
-		}
-		div#page__admincontact
-		{
-			text-align: start;
-			font-size: 0px;
-		}
-		div#footer
-		{
-			font-size: 0px;
-		}
-		#app > div:nth-child(4) > div
-		{
-			display: flex;
-			padding-left: 0;
-			list-style: none;
-			border-radius: 0.25rem;
-			margin-top: 100px;
-		}
-		html>body.bodybg>#app>div:nth-of-type(2)>div.pagination>a:last-child
-		{
-			content: url(https://i1.beon.fun/55/16/1655/72/610672/image.png);
-			margin-top: 0px;
-			height: 144px;
-			max-height: 144px;
-			margin-right: 9px;
-			padding-right: 0px;
-			margin-left: 32px;
-			width: 48px;
-			max-width: 48px;
-		}
-		html>body.bodybg>#app>div:nth-of-type(2)>div.pagination>a
-		{
-			content: url(https://i1.beon.fun/55/16/1655/76/610676/image.png);
-			font-size: 0px;
-			margin-top: 0px;
-			padding-top: 0px;
-			width: 48px;
-			max-width: 48px;
-			height: 144px;
-			max-height: 144px;
-			padding-right: 0px;
-			padding-left: 0px;
-			margin-right: 5px;
-			margin-left: -25px;
-		}
-		#app > div:nth-child(4) > div > a
-		{
-			font-size: 0px;
-			text-decoration: none;
-			padding-right: 40px;
-			padding-left: 20px;
-			margin-bottom: 0px;
-		}
-		span.pagination-goto+a
-		{
-			font-size: 0px;
-			display: block;
-			height: 76px;
-			transition: 0.2s;
-		}
-		.pagination a
-		{
-			font-size: 0;
-			display: none;
-		}
-		#beon-fnplayer
-		{
-			height: 16px;
-			width: 98%;
-			display: flex;
-			align-items: center;
-			background-color: #FFC677;
-			margin: 2px;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		#fnplayer-play
-		{
-			border: 0;
-			background: transparent;
-			box-sizing: border-box;
-			width: 0;
-			height: 10px;
-			border-color: transparent transparent transparent rgb(235, 118, 71);
-			transition: 100ms all ease;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-			border-style: solid;
-			border-width: 5px 0 5px 10px;
-		}
-		#fnplayer-stop
-		{
-			border: 0;
-			height: 10px;
-			width: 10px;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-			background: rgb(235, 118, 71);
-			padding: 0;
-		}
-		#fnplayer-slider
-		{
-			height: 10px;
-			flex-grow: 1;
-			position: relative;
-			background: rgb(235, 118, 71);
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		#fnplayer-slider-inner
-		{
-			background-color: #FFC677;
-		}
-		#fnplayer-volume-mask
-		{
-			width: 0;
-			height: 0;
-			border-style: solid;
-			border-width: 10px 30px 0 0;
-			border-color: #CCCCCC transparent transparent transparent;
-			position: absolute;
-			display: none;
-		}
-		#fnplayer-volume
-		{
-			display: flex;
-			align-items: flex-end;
-			height: 10px;
-			width: 30px;
-			background-color: #E6E6E6;
-			display: none;
-		}
-		#fnplayer-volume
-		{
-			display: flex;
-			align-items: flex-end;
-			height: 0px;
-			width: 0px;
-			background-color: #e6e6e600;
-			display: none;
-		}
-		#fnplayer-volume-mask
-		{
-			width: 0;
-			height: 0;
-			border-style: solid;
-			border-width: 10px 30px 0 0;
-			border-color: #cccccc00 transparent transparent transparent;
-			position: absolute;
-			display: none;
-		}
-		.user:before
-		{
-			content: "";
-			margin-right: 1px;
-		}
-		.post-title, h1
-		{
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			border: 6px solid transparent;
-			border-image: url(https://i1.beon.fun/55/16/1655/26/595526/scrollborder.png) 24 fill repeat;
-			border-image-width: 24px;
-			border-image-outset: 6px;
-			padding: 0px 18px 0px 18px;
-			margin-top: 20px;
-			margin-bottom: 16px;
-			font-size: 16px;
-			margin-left: auto;
-			margin-right: auto;
-			height: 50px;
-			max-width: 500px;
-			text-align: center;
-		}
-		#app > div:nth-child(2) > a > span
-		{
-			font-size: 16px;
-			margin-top: 25px;
-			position: absolute;
-			content: url(https://i1.beon.fun/55/16/1655/51/606251/image.png);
-		}
-		span.crumb-item
-		{
-			display: none;
-			font-size: 0p;
-		}
-	}
-	@media screen and (min-width: 800px)
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+@media only screen and (min-width: 800px)
 	{
-		/*--------------------TOOLTIPS--------------------*/
+/*--------------------Features--------------------*/
 		:root
 		{
-			--Left-TextBoxes-Width: 388px;
-			--TextBox-Border-Main-1: #fb9e00;
-			--TextBox-Border-Main-2: #e08700;
-			--TextBox-Border-Dark: #5b2b2a;
-			--TextBox-Border-Medium-1: #903e01;
-			--TextBox-Border-Medium-2: #ba5901;
-			--TextBox-Border-Light: #f7ba00;
-			--TextBox-Border-Shadow: #cb8652;
+			--TextBox-Border-Shadow: #968e85;
 			--TextBox-Border-Size: 3px;
-			--TextBox-Background: #ffcd82;
+                        --TextBox-Background: #ffcd82;
 			--TextBox-Background-Gradient-1: #ffcd82;
 			--TextBox-Background-Gradient-2: #eeb272;
-			--TextBox-Text-Vertical-Padding: 12px;
-			--TextBox-Text-Side-Padding: 15px;
-			--TextBox-Text-Color: #000;
-			--TextBox-Text-Shadow: #d7864f;
-			--TextBox-Link-Color: #a5682a;
-			--TitleBox-Text-Font-Size: 18px;
-			--TitleBox-Text-Line-Height: 1em;
-			--Bio-Box-Font-Size: 21px;
-			--Bio-Box-Line-Height: 1.1em;
-			--Bio-Box-Maximum-Height: auto;
-			--Scrollbar-Thumb: transparent;
-			--Sidebar-Width: 120px;
-			--Music-Controls-Size: 12px;
-			--Music-Title-Font-Size: 15px;
-			--Sidebar-Image-Width: 85px;
-			--Desc-Box-Font-Size: 17px;
-			--Desc-Box-Line-Height: 1.25em;
+			--Pixel-border: rgb(144 62 1) 0px -3px, rgb(144 62 1) 0px 3px, rgb(144 62 1) 3px 0px, rgb(144 62 1) -3px 0px, rgb(144 62 1) -3px 0px, rgb(144 62 1) -3px 3px, rgb(144 62 1) -3px -3px, rgb(144 62 1) 3px -3px, rgb(144 62 1) 3px 3px, rgb(186 90 1) -3px -6px, rgb(186 90 1) 0px -6px, rgb(224 135 0) 3px -6px, rgb(186 90 1) 6px 0px, rgb(224 135 0) 6px -3px, rgb(186 90 1) 6px 3px, rgb(224 135 0) 0px 6px, rgb(186 90 1) 3px 6px, rgb(144 62 1) 6px 6px, rgb(186 90 2) -3px 6px, rgb(224 135 0) -6px 3px, rgb(144 62 1) -6px 6px, rgb(224 135 0) -6px 0px, rgb(186 90 1) -6px -3px, rgb(144 62 1) -6px -6px, rgb(144 62 1) 6px -6px, rgb(224 135 0) 6px -9px, rgb(224 135 0) 3px -9px, rgb(186 90 2) -6px -9px, rgb(91 43 42) 0px -12px, rgb(91 43 42) -6px -12px, rgb(91 43 42) 6px -12px, rgb(186 90 2) 0px 9px, rgb(186 90 2) -6px 9px, rgb(186 90 2) 6px 9px, rgb(186 90 2) -9px 6px, rgb(144 62 1) -9px 9px, rgb(186 90 2) -9px -6px, rgb(91 43 42) 0px 12px, rgb(91 43 42) 6px 12px, rgb(91 43 42) -6px 12px, rgb(144 62 1) -9px -9px, rgb(91 43 42) -12px 0px, rgb(91 43 42) -12px -6px, rgb(91 43 42) -12px 6px, rgb(224 135 0) 9px 0px, rgb(224 135 0) 9px 3px, rgb(186 90 2) 9px 6px, rgb(144 62 1) 9px 9px, rgb(224 135 0) 9px -6px, rgb(144 62 1) 9px -9px, rgb(91 43 42) 12px 6px, rgb(91 43 42) 12px -6px;
 		}
-		/*?????????*/
-		.shadow-sm
-		{
-			box-shadow: none !important;
-		}
-		body
-		{
-			background: #F5E8D8 url(https://66.media.tumblr.com/tumblr_lzju29VxIR1r9g6hvo1_250.png);
-			background-attachment: fixed;
-			background-repeat: repeat;
-			color: #FFFFFF;
-			font-weight: bolder;
-			overflow: overlay;
-		}
-		::-webkit-scrollbar
+/*--------------------BG--------------------*/
+
+body {
+padding: 1%;
+    cursor: url(https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Cursor.png), auto;
+}
+* {  transition: all 0.3s ease-in;}
+
+.bodybg {
+    background: #F5E8D8 url(https://i.pinimg.com/originals/b2/29/1c/b2291c7633bcfe69cb7b3b7ba0d814ab.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+::-webkit-scrollbar
 		{
 			width: 10px;
 			height: 10px;
+
 		}
 		::-webkit-scrollbar-thumb
 		{
-			background: rgba(90, 90, 90, 0.5);
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
+			background: #9f542c;
+			cursor:url(https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png), auto;
 		}
 		::-webkit-scrollbar-track
 		{
-			background: rgba(0, 0, 0, 0.2);
-			border: 4px solid transparent;
+margin: 1%;
+			background: #e8c7a0;
+			border: 4px solid #e8c7a0;
+box-shadow: #D68F54 0px -2px, #FFDAA1 0px 2px, #D68F54 2px 0px, #FFDAA1 -2px 0px;
 			background-clip: content-box;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754679267475486/Stardew-Valley-Cursor.png"), auto;
+			cursor: cursor: url(https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Cursor.png), auto;
 		}
-		#page__rendertime
-		{
-			display: none;
+a {
+    color: #a5682a;
+    cursor: url(https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png), auto;
+font-family: 'Press Start 2P';
+font-size: 12px;
+}
+a:hover{ 
+color: #eb7647;
+text-decoration: none;
+}
+::selection, .quotation{
+background: #eb7647;
+        width: fit-content;
+border-left: 3px solid #000000;}
+span {
+font-family: 'Press Start 2P';
+    font-size: 10px!important;
+}
+input {
+    overflow: visible;
+    box-shadow: #D68F54 0px -2px, #FFDAA1 0px 2px, #D68F54 2px 0px, #FFDAA1 -2px 0px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    background-color: #FFC677;
+    border: 0px;
+}
+input:focus {
+    outline: 0px dotted;
+    outline: 0px auto -webkit-focus-ring-color
+background-color: #f3e0c6;
+}
+button, input:hover {
+background: #eb7647;
+
+}
+[src="/i/logo2-deer.png"],  .user:before, #navbarSupportedContent > ul.navbar-nav.ml-auto > div > table > tbody > tr:nth-child(1) > td:nth-child(4) > ul > li > a:nth-child(2), div.post-content.blog_total_counter, body > div.bottombg > div.footer__infolinks.p-1, .left-menu br, [src="/i/user.png"], [src="/i/online.png"], [src="/i/offline.png"], [src="/i/blog.png"], .user:before, #page__admincontact, #page__rendertime, .pagination-goto{
+		display: none;
+	}
+.btn-outline-primary {font-size: 10px;
+border-color: #a5682a;
+color: #a5682a;}
+.btn-outline-primary:hover{ 
+color: #eb7647;}
+
+[src="//beon.fun/i/design-off.png"] {
+display: none;}
+a[href^="/design/disable"]{
+color: #eb7647!important;}
+a[href^="/design/disable"]:before{
+font-family: 'Font Awesome 5 Free';
+font-size: 16px;
+content: "\f070";}
+/*--------------------top-menu--------------------*/
+nav.navbar {
+color: #ffffff !important;
+border-image-slice: 13 13 13 13;
+        border-image-width: 13px 13px 13px 13px;
+        border-image-repeat: round round;
+        border-image-source: url(https://i1.beon.fun/55/16/1655/59/1104359/Bezymyannyy.png);
+        border-style: solid;
+        padding: 13px 13px 13px 25px;
+        background-image: url(https://i1.beon.fun/55/16/1655/48/1107648/plants_preview_0-1-1.png), url(https://stardewcommunitywiki.com/mediawiki/images/thumb/c/c1/Indoor_Hanging_Basket.png/24px-Indoor_Hanging_Basket.png);
+        background-repeat: no-repeat;
+        background-color: #e8c7a0;
+        background-position: right bottom 10px, top 10px left 12px;}
+.navbar>.container {
+margin-left: 0;}
+    .navbar-expand-md .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+        margin-left: 0;
+    }
+nav.navbar a {
+    color: #a5682a !important;
+    white-space: nowrap;
+}
+
+a.navbar-brand:hover {
+color:#fff!important;
+font-size: 26px;
+transition: 0.3;
+}
+
+.pc-menu a {
+    font-size: 7px;
+padding: 3px!important;
+}
+.pc-menu a:hover {
+    transition: 0.5s;
+color: #eb7647!important;
+    transition: 0.5s;
+ box-shadow: inset 200px 0 0 0 #ffffffa6;
+text-decoration: none;
+}
+.m2 {
+    font-size: 10px;
+    color: #666666;
+    font-family: 'Press Start 2P';
+    width: 200px;
+}
+
+/*--------------------Crumbs--------------------*/
+
+/*Pagination*/
+.pagination {
+    align-items: flex-end;
+        margin-left: 10px;
+        margin-bottom: 20px;
+        border-radius: unset;
+        border-image-slice: 13 13 13 13 fill;
+        border-image-width: 13px 13px 13px 13px;
+        border-image-repeat: round round;
+        border-image-source: url(https://i1.beon.fun/55/16/1655/59/1104359/Bezymyannyy.png);
+        border-style: solid;
+        padding: 0px 0px 5px 5px;
+}
+.pagination a:last-child:after
+		{content: url(https://stardewcommunitywiki.com/mediawiki/images/thumb/1/1a/Ceiling_Leaves_5.png/24px-Ceiling_Leaves_5.png);
+	         font-size: 15px;
+min-height: 24px;
+	          margin-top: 20px;
 		}
-		body
+span.pagination-goto+a:before
 		{
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754679267475486/Stardew-Valley-Cursor.png"), auto;
-		}
-		.bodybg
-		{
-			background-size: cover;
-			background-image: url(https://i.redd.it/amfzanxbvw621.png);
-		}
-		h2
-		{
-			color: var(--TextBox-Link-Color);
-		}
-		html>body.bodybg>#app>nav.navbar.navbar-expand-md.navbar-light.bg-white.shadow-sm>div.container>#navbarSupportedContent>ul:nth-of-type(2)>a.my-menu.for-mobile.d-none.d-md-inline
-		{
+			content: url(https://stardewcommunitywiki.com/mediawiki/images/thumb/1/1b/Ceiling_Leaves_4.png/24px-Ceiling_Leaves_4.png);
+			font-family: 'Font Awesome 5 Free';
 			font-size: 0px;
+			margin-top: 20px;
 		}
-		#app > div:nth-child(2) > div > a
-		{
-			text-decoration: none;
-			padding-right: 40px;
-			padding-left: 20px;
-			margin-bottom: 0px;
+div.crumbs {
+    margin-top: 0px!important;
+    margin-bottom: 10px;
+    width: 50%;
+    margin-left: auto;
+color: white;
+font-family: 'Press Start 2P';
+}
+div.crumbs a {
+font-family: 'Press Start 2P';
+}
+/*--------------------.py-4--------------------*/
+.py-4 {
+    display: flex;
+}
+[onclick="window.scroll({top: 0,behavior: 'smooth'})"]
+		{position: fixed;
+    cursor: pointer;
+content: "↑ ";
+    right: 1%;
+font-size: 0px!important;
+    top: 40%;
+	font-family: 'Press Start 2P';
 		}
-		html>body.bodybg>#app>div:nth-of-type(2)>div.pagination>a
-		{
-			content: url(https://i1.beon.fun/55/16/1655/76/610676/image.png);
-			font-size: 0px;
-			margin-top: 0px;
-			padding-top: 0px;
-			width: 50px;
-			max-width: 50px;
-			height: 144px;
-			max-height: 144px;
-			padding-right: 10px;
-			padding-left: 0px;
-			margin-right: 85px;
-			margin-left: -25px;
-		}
-		html>body.bodybg>#app>div:nth-of-type(2)>div.pagination
-		{
-			width: 800px;
-			max-width: 800px;
-			height: 50px;
-			max-height: 50px;
-			margin-top: 160px;
-			padding-top: 0px;
-			padding-bottom: 0px;
-			margin-bottom: -200px;
-			font-size: 0px;
-			line-height: 0px;
-			padding-left: 300px;
-			margin-left: 0px;
-		}
-		html>body.bodybg>#app>div:nth-of-type(2)>div.pagination>a:last-child
-		{
-			content: url(https://i1.beon.fun/55/16/1655/72/610672/image.png);
-			margin-top: 0px;
-			height: 144px;
-			max-height: 144px;
-			margin-right: 4px;
-			padding-right: 0px;
-			padding-left: 10px;
-			width: 56px;
-			max-width: 56px;
-		}
-		.pagination, .crumbs [href="/"]
-		{
-			top: 469px;
-			left: 233px;
-			border-radius: unset;
-			height: 100px;
-			font-size: 0px;
-		}
-		.crumb-item
-		{
-			display: none;
-		}
-		.pagination a:last-child
-		{
-			overflow: hidden;
-			font-size: 0px;
-			display: block;
-			height: 76px;
-			bottom: 0;
-			transition: 0.2s;
-		}
-		#app > div:nth-child(2) > a > span
-		{
-			font-size: 16px;
-			margin-left: -700px;
-			margin-top: 150px;
-			position: absolute;
-			content: url(https://i1.beon.fun/55/16/1655/51/606251/image.png);
-		}
-		#app > div:nth-child(2) > a > span:hover
-		{
-			font-size: 16px;
-			margin-left: -700px;
-			margin-top: 150px;
-			position: absolute;
-			content: url(https://i1.beon.fun/55/16/1655/51/606251/image.png);
+ [onclick="window.scroll({top: 0,behavior: 'smooth'})"]:hover{
 			filter: drop-shadow(0 0 0.75rem rgb(228, 242, 242));
+transition: all 0.1s ease-in;
+cursor: url(https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png), auto;
+}
+[onclick="window.scroll({top: 0,behavior: 'smooth'})"]:before {
+content: "↑ ";
+color: #abb2c3;
+cursor:url(https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png), auto;
+font-size: 40px;}
+a.my-menu.for-mobile.d-none.d-md-inline:before{
+content: "↓";
+        text-shadow: 1px 1px 2px #ffffff, 0 0 1px black, 0 0 0.2px white;
+color: #23253e !important;
+font-size: 40px;}
+a.my-menu.for-mobile.d-none.d-md-inline{
+position: fixed;
+    right: 1%;
+font-size: 0px;
+    top: 50%;
 		}
-		#app > div:nth-child(2) > a:nth-child(2) > span
-		{
-			content: url(https://i1.beon.fun/55/16/1655/48/612148/image-1111-1.png);
-			margin-top: 75px;
+a.my-menu.for-mobile.d-none.d-md-inline:hover{
+			filter: drop-shadow(0 0 0.75rem rgb(228, 242, 242));
+}
+/*--------------------left-menu--------------------*/
+.mw-100 {
+    max-width: 100% !important;
+    border-image-slice: 82 97 71 91 fill;
+    border-image-width: 20px 20px 20px 20px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: stretch stretch;
+    border-image-source: url(https://64.media.tumblr.com/0ffd3c909afebedbafbff2179cae8e01/tumblr_p67k43nmo21x8f1hxo1_640.png);
+    border-style: solid;
+    padding: 20px 20px 15px 20px;
+}
+a,#beon-fnplayer, h3,  input {
+    cursor: url(https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png), auto;
+}
+div.left-menu {
+   font-family: 'Press Start 2P';
+    border: 0px solid;
+    width: 25%;
+    text-align: start;
+margin-right: 5%;
+    display: flex;
+    font-size: x-small;
+    flex-direction: column;
+}
+ .left-menu a,  .blog__tags a {
+font-size: 10px!important;}
+div.left-menu::before {
+        content: "";
+        height: 24px;
+        display: block;
+        background: url(https://i1.beon.fun/55/16/1655/92/1110392/image-18.png) right no-repeat, url(https://i1.beon.fun/55/16/1655/91/1110391/image-19.png) left no-repeat, url(https://i1.beon.fun/55/16/1655/90/1110390/image-20.png) center no-repeat;
+        background-size: auto;
+        margin-bottom: -24px;
+        z-index: 1;
+        position: sticky;}
+div.left-menu::after{
+        content: "";
+        height: 24px;
+        display: block;
+        background: url(https://i1.beon.fun/55/16/1655/92/1110392/image-18.png) right no-repeat, url(https://i1.beon.fun/55/16/1655/91/1110391/image-19.png) left no-repeat;
+        background-size: auto;
+        z-index: 1;
+        margin-top: -24px;
+        transform: rotate(180deg);
+        position: sticky;}
+h3.left-menu-text {
+    font-size: 16px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+.left-menu h3 {
+font-size: 14px;
+}
+.left-menu__gift a{
+font-size: 8px !important;}
+ div.blog__tags > h3:before{
+ margin-right: 5px;
+content:url(https://i1.beon.fun/55/16/1655/6/1110506/36px-Solar_Essence-1.png);
+}
+div.blog__read-me > h3:before{
+ margin-right: 5px;
+content:url();}
+div.blog__iread > h3:before{
+ margin-right: 5px;
+content:url();}
+div.blog__last-comments > h3:before{
+ margin-right: 5px;
+content:url();}
+
+div.blog__gifts > h3:before{
+ margin-right: 10px;
+content: url(https://i1.beon.fun/55/16/1655/17/1104217/Gift_Icon-1.png);
+}
+ div.blog__about > h3:before{
+margin-right: 5px;
+content: url("");
+}
+ div.left-menu__user-notification.left-menu__friends > h3:before, #app > main > div.left-menu > div.left-menu__friends.left-menu__friends_offline>h3:before{
+margin-right: 5px;
+content: url(https://i1.beon.fun/55/16/1655/60/1110460/36px-Sunflower-2.png);
+
+}
+ div.left-menu__user-notification.left-menu__unread-notifications > h3:before{
+margin-right: 5px;
+content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/6/63/DialogueBubbleLove.png/24px-DialogueBubbleLove.png);
+}
+div.notifications__comments > h3:before{
+margin-right: 5px;
+content: url(https://i1.beon.fun/55/16/1655/59/1104259/Speech_bubble-1-1.png);
+}
+
+.blog__gifts, .blog__tags,.left-menu__user-notification, .left-menu__friends_offline, div.left-menu__user-notification, .left-menu__friends, .left-menu__friends.left-menu__friends_offline, div.left-menu__user-notification.left-menu__unread-message, div.notifications__comments,  div.community__moders,  div.community__members, div.blog__read-me, div.blog__iread,  div.blog__last-comments{height:45px;
+
+			overflow: hidden;
+			transition: 0.1s;
+			transition-delay: 10s;
+border-image-slice: 13 13 13 13 fill;
+        border-image-width: 13px 13px 13px 13px;
+        border-image-repeat: round round;
+        border-image-source: url(https://i1.beon.fun/55/16/1655/59/1104359/Bezymyannyy.png);
+        border-style: solid;
+        padding: 13px 13px 13px 13px;
 		}
-		span.pagination-goto+a
-		{
-			font-size: 0px;
-			display: block;
-			height: 76px;
-			transition: 0.2s;
+
+		.blog__gifts:active, .blog__tags:active, .left-menu__user-notification:active,div.left-menu__user-notification.left-menu__unread-message:active, .left-menu__friends, .left-menu__friends_offline:active, div.left-menu__user-notification.left-menu__friends:active, .left-menu__friends.left-menu__friends_offline:active,div.notifications__comments:active, div.blog__about:active, div.community__moders:active, div.community__members:active, div.blog__read-me:active,div.blog__iread:active, div.blog__last-comments:active
+		{height: 100%;
+			max-height: 100%;
+			transition: 0.1s;
+transition: all 1s ease-in;
 		}
-		#app > div:nth-child(2) > div > a:hover
+div.blog__about {border-image-slice: 13 13 13 13 fill;
+        border-image-width: 13px 13px 13px 13px;
+        border-image-repeat: round round;
+        border-image-source: url(https://i1.beon.fun/55/16/1655/59/1104359/Bezymyannyy.png);
+        border-style: solid;
+        padding: 13px 13px 13px 13px;}
+
+ div.left-menu__user-notification.left-menu__unread-message > h3:before {
+content: url(https://i1.beon.fun/55/16/1655/87/1104487/Mail-1.png);
+}
+ div.left-menu__user-notification.left-menu__unread-message > p, div.blog__last-comments a , div.blog__iread a  {margin-top: 20px;}
+/*player*/
+#fnplayer-volume-mask {
+    border-color: #e8c7a0 transparent transparent transparent;
+}
+#fnplayer-play {
+    border-color: transparent transparent transparent #eb7647;
+}
+
+#fnplayer-stop {
+    background: #eb7647;
+}
+#beon-fnplayer {
+    background-color: #e8c7a0;
+box-shadow: #D68F54 0px -2px, #FFDAA1 0px 2px, #D68F54 2px 0px, #FFDAA1 -2px 0px;
+}
+#fnplayer-volume-inner {
+    background-color: #eb7647;
+    border: 1px solid #eb7647;
+}
+#fnplayer-slider {
+    background-color: #eb7647;
+}
+#fnplayer-slider-inner {
+    background-color: #e8c7a0;
+}
+
+/*--------------------content--------------------*/
+.content {width: 60%;
+}
+.datebg {
+    color: white;
+font-size: 12px;
+font-family: 'Press Start 2P';
+}
+    
+img.flag {
+    height: 15px;
+    width: 15px;
+    content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/9/97/Emojis098.png/36px-Emojis098.png);
+    vertical-align: baseline;
+    margin-left: 5px;
+}
+
+/*post-content-comment*/
+
+.post-title-user
+{ text-decoration:none;
+font-size: 11px;
+line-height: 55px;
+}
+.post-header {
+font-size: 9px!important;}
+.post-title-date, {
+    color: #bdafaf;
+    padding-left: 1rem;
+    font-family: 'Press Start 2P';
+}
+.col-md-6 {
+        margin-top: 10px;
+    }
+ .post__tags-list {
+    color: #666666;
+    margin-bottom: 10px;
+}
+    span.comments_count span {
+        font-family: 'Press Start 2P';
+font-size: 0 !important;
+
+    }
+span.comments_count span::before {
+        padding: 0.3rem;
+        content: url(https://i1.beon.fun/55/16/1655/69/1110869/Speech_bubble-1-1.png);
+    }
+
+.post-title, .post-text, .comment-text, h1 {
+    word-break: break-word;
+    font-weight: bold;
+}
+.post-content, .comment-content{
+background: url(https://i1.beon.fun/55/16/1655/11/1110311/image-17.png), url(https://glen-themes.gitlab.io/abt-pages/15/imgs/bg_pattern.png);
+    box-shadow: var(--Pixel-border);
+border-right: calc(var(--TextBox-Border-Size) * 2) solid var(--TextBox-Border-Shadow);
+border-top: calc(var(--TextBox-Border-Size) * 2) solid var(--TextBox-Border-Shadow);
+    background-clip: padding-box;
+    padding: 1%;
+margin-top: 60px !important;
+        background-position: top left, center center;
+background-repeat:  no-repeat, repeat;
+}
+.comment-content {
+background: url(https://i1.beon.fun/55/16/1655/70/1110570/image-17.png), url(https://glen-themes.gitlab.io/abt-pages/15/imgs/bg_pattern.png);
+background-repeat:  no-repeat, repeat;
+        background-position: top right, center center;}
+.post-title, h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 6px solid transparent;
+    border-image: url(https://i1.beon.fun/55/16/1655/1/1110201/output-onlinepngtools-11.png) 24 fill repeat;
+    border-image-width: 24px;
+    border-image-outset: 6px;
+      padding: 0px 18px 0px 18px !important;
+    margin-top: 20px;
+    font-size: 9px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    max-width: fit-content;
+    text-align: center;
+text-decoration: none;
+filter: brightness(0.95) sepia(30%) saturate(80%);
+}
+a.post-title:hover
 		{
-			text-decoration: none;
-			padding-right: 40px;
-			padding-left: 20px;
-			margin-bottom: 0px;
-			filter: drop-shadow(0 0 0.75rem rgb(255, 217, 0));
-		}
-		.pagination a
-		{
-			font-size: 0;
-			display: none;
-		}
-		span.pagination-goto+a:before
-		{
-			content: url(https://i1.beon.fun/55/16/1655/11/605511/image.png);
-			font-family: 'Font Awesome 5 Free';
-			font-size: 0px;
-			position: absolute;
-			margin-top: 6px;
-		}
-		.pagination a:last-child:before
-		{
-			content: url(https://i1.beon.fun/55/16/1655/24/605424/image.png);
-			font-family: 'Font Awesome 5 Free';
-			font-size: 0px;
-			position: absolute;
-			margin-top: 6px;
-		}
-		div.crumbs
-		{
-			display: flex;
-			justify-content: space-around;
-			align-items: center;
-			flex-direction: column;
-			align-content: stretch;
-			height: 76px;
-			flex-wrap: nowrap;
-			margin-top: -35px;
-			margin-bottom: 150px;
-		}
-		.gifts-page__gifts-item
-		{
-			text-align: center;
-			background-image: linear-gradient(to bottom, var(--TextBox-Background-Gradient-1), var(--TextBox-Background-Gradient-2));
-			margin-left: 20px;
-			border: 6px solid transparent;
-			border-image: url(https://i1.beon.fun/55/16/1655/17/611917/scrollborder.png) 24 fill repeat;
-			border-image-width: 28px;
-			border-image-outset: 9px;
-			padding: 18px 0px 18px 0px;
-			margin-top: 20px;
-			margin-bottom: 16px;
-			max-height: 100px;
-			max-width: 150px;
-			font-size: 0px;
-		}
-		.gifts-page__gifts-item:active
-		{
-			text-align: center;
-			background-image: linear-gradient(to bottom, var(--TextBox-Background-Gradient-1), var(--TextBox-Background-Gradient-2));
-			margin-left: 20px;
-			border: 6px solid transparent;
-			border-image: url(https://i1.beon.fun/55/16/1655/17/611917/scrollborder.png) 24 fill repeat;
-			border-image-width: 28px;
-			border-image-outset: 9px;
-			padding: 18px 0px 18px 0px;
-			margin-top: 20px;
-			margin-bottom: 16px;
-			max-height: 600px;
-			font-size: 12px;
-			max-width: 150px;
-		}
-		.pagination-goto
-		{
-			display: none;
-		}
-		.pagination
-		{
-			float: right;
-		}
-		a[href$="/page"]
-		{
-			font-size: 0px;
-		}
-		html>body.bodybg>#app>nav.navbar.navbar-expand-md.navbar-light.bg-white.shadow-sm>div.container>#navbarSupportedContent>ul:nth-of-type(2)>a.my-menu.for-mobile.d-none.d-md-inline
-		{
-			margin-bottom: -14px;
-			margin-right: 6px;
-			content: url("https://i1.beon.fun/55/16/1655/9/601409/image1.png");
-			font-size: 0px;
-		}
-		html>body.bodybg>#app>nav.navbar.navbar-expand-md.navbar-light.bg-white.shadow-sm>div.container>#navbarSupportedContent>ul:nth-of-type(2)>a.my-menu.for-mobile.d-none.d-md-inline:hover
-		{
-			content: url(https://i1.beon.fun/55/16/1655/49/606149/ezgif-2-64b9f69adlop2.gif);
-			margin-bottom: -14px;
-			margin-right: 6px;
-			font-size: 0px;
-			z-index;
-			-1;
-		}
-		html>body.bodybg>#app>div.crumbs>a>span:hover
-		{
-			text-decoration-line: none;
-			color: rgb(247, 152, 29);
-		}
-		a:hover
-		{
-			color: rgb(235, 118, 71);
-		}
-		div#page__admincontact
-		{
-			text-align: start;
-			font-size: 0px;
-		}
-		div#footer
-		{
-			font-size: 0px;
-		}
-		[onclick="window.scroll({top: 0,behavior: 'smooth'})"]
-		{
-			content: url(https://i1.beon.fun/55/16/1655/1/609101/image.png);
-			font-size: 0px;
-			margin-right: 6px;
-			font-size: 0px;
-		}
-		[onclick="window.scroll({top: 0,behavior: 'smooth'})"]:hover
-		{
-			content: url(https://i1.beon.fun/55/16/1655/3/609103/ezgif-3-47a45a686a.gif);
-			font-size: 0px;
-			margin-right: 6px;
-			font-size: 0px;
-		}
-		div#footer:after
-		{
-		}
-		.content
-		{
-			width: 80%;
-			display: flex;
-			flex-direction: column;
-		}
-		.py-4
-		{
-			display: flex;
-			align-items: center;
-		}
-		a.post-title:hover
-		{
-			color: rgb(235, 118, 71);
-			text-decoration-line: none;
-			mix-blend-mode: screen;
-			font-size: 16px;
-			transition: 0.3s;
-			font-family: cursive;
-		}
-		a.post-title
-		{
-			color : rgb(235, 118, 71, 0);
-			text-decoration-line: none;
-			content: none;
-			font-size: 16px;
-			font-family: cursive;
-		}
-		a, .music-controls
-		{
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		#beon-fnplayer
-		{
-			height: 16px;
-			width: 98%;
-			display: flex;
-			align-items: center;
-			background-color: #FFC677;
-			margin: 2px;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		#fnplayer-play
-		{
-			border: 0;
-			background: transparent;
-			box-sizing: border-box;
-			width: 0;
-			height: 10px;
-			border-color: transparent transparent transparent rgb(235, 118, 71);
-			transition: 100ms all ease;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-			border-style: solid;
-			border-width: 5px 0 5px 10px;
-		}
-		#fnplayer-stop
-		{
-			border: 0;
-			height: 10px;
-			width: 10px;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-			background: rgb(235, 118, 71);
-			padding: 0;
-		}
-		#fnplayer-slider
-		{
-			height: 10px;
-			flex-grow: 1;
-			position: relative;
-			background: rgb(235, 118, 71);
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		#fnplayer-slider-inner
-		{
-			background-color: #FFC677;
-		}
-		#fnplayer-volume-mask
-		{
-			width: 0;
-			height: 0;
-			border-style: solid;
-			border-width: 10px 30px 0 0;
-			border-color: #CCCCCC transparent transparent transparent;
-			position: absolute;
-			display: none;
-		}
-		#fnplayer-volume
-		{
-			display: flex;
-			align-items: flex-end;
-			height: 10px;
-			width: 30px;
-			background-color: #E6E6E6;
-			display: none;
-		}
-		.left-menu
-		{
-			display: flex;
-			width: auto;
-		}
-		.py-4
-		{
-			display: flex;
-			align-items: center;
-		}
-		html > body.bodybg > #app > main.py-4 > div.left-menu > div:nth-of-type(4)
-		{
-			text-align: center;
-			font-size: 16px;
-			font-weight: 800;
-		}
-		.mw-100
-		{
-			margin-top: 20px;
-			margin-bottom: 10px;
-			box-shadow: rgb(144 62 1) 0px -3px, rgb(144 62 1) 0px 3px, rgb(144 62 1) 3px 0px, rgb(144 62 1) -3px 0px, rgb(144 62 1) -3px 0px, rgb(144 62 1) -3px 3px, rgb(144 62 1) -3px -3px, rgb(144 62 1) 3px -3px, rgb(144 62 1) 3px 3px, rgb(186 90 1) -3px -6px, rgb(186 90 1) 0px -6px, rgb(224 135 0) 3px -6px, rgb(186 90 1) 6px 0px, rgb(224 135 0) 6px -3px, rgb(186 90 1) 6px 3px, rgb(224 135 0) 0px 6px, rgb(186 90 1) 3px 6px, rgb(144 62 1) 6px 6px, rgb(186 90 2) -3px 6px, rgb(224 135 0) -6px 3px, rgb(144 62 1) -6px 6px, rgb(224 135 0) -6px 0px, rgb(186 90 1) -6px -3px, rgb(144 62 1) -6px -6px, rgb(144 62 1) 6px -6px, rgb(224 135 0) 6px -9px, rgb(224 135 0) 3px -9px, rgb(186 90 2) -6px -9px, rgb(91 43 42) 0px -12px, rgb(91 43 42) -6px -12px, rgb(91 43 42) 6px -12px, rgb(186 90 2) 0px 9px, rgb(186 90 2) -6px 9px, rgb(186 90 2) 6px 9px, rgb(186 90 2) -9px 6px, rgb(144 62 1) -9px 9px, rgb(186 90 2) -9px -6px, rgb(91 43 42) 0px 12px, rgb(91 43 42) 6px 12px, rgb(91 43 42) -6px 12px, rgb(144 62 1) -9px -9px, rgb(91 43 42) -12px 0px, rgb(91 43 42) -12px -6px, rgb(91 43 42) -12px 6px, rgb(224 135 0) 9px 0px, rgb(224 135 0) 9px 3px, rgb(186 90 2) 9px 6px, rgb(144 62 1) 9px 9px, rgb(224 135 0) 9px -6px, rgb(144 62 1) 9px -9px, rgb(91 43 42) 12px 6px, rgb(91 43 42) 12px -6px;
-			max-width: 100% !important;
-		}
-		#app > nav > div > div:nth-child(1) > div.m2
-		{
-			display: none;
-			font-size: 15px;
-			font-family: "Yellowtail", cursive;
-			text-shadow: 0.3px 0.3px 2px #511107;
-		}
-		.navbar-light .navbar-brand, .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand
-		{
-			color: rgba(0, 0, 0, 0.9);
-			font-size: 0px;
-			content: url(https://i1.beon.fun/89/15/1589/75/595575/STVBEON.png);
-			width: 287px;
-			border: 6px solid transparent;
-			border-image: url(https://i1.beon.fun/55/16/1655/8/596908/snapedit_1678917740682-PhotoRoom.png-PhotoRoom-1.png) 24 fill repeat;
-			border-image-width: 24px;
-			border-image-outset: 6px;
-			padding: 0px 18px 0px 18px;
-			margin-top: -87px;
-			margin-bottom: 16px;
-			text-shadow: 0px 2px 1px #D5864F;
-			font-size: 30px;
-			margin-left: auto;
-			margin-right: auto;
-		}
-		.post-title-user
-		{
-			margin-right: 0px;
-			padding-top: 0px;
-			font-size: 19px;
-			font-weight: bolder;
-			line-height: 55px;
-		}
-		a.user.post-title-user:hover
-		{
-			margin-right: 0px;
-			padding-top: 0px;
-			font-size: 19px;
-			font-weight: bolder;
-			color: rgb(235, 118, 71);
-			text-decoration: none;
-			font-weight: bolder;
-		}
-		.py-4
-		{
-			display: flex;
-			flex-direction: column;
-			align-content: center;
-			align-items: center;
-		}
-		div.blog__read-me, div.blog__last-comments, div.blog__iread
-		{
-			display: none;
-		}
-		.textareabg
-		{
-			border-image: url(https://i1.beon.fun/55/16/1655/35/596735/image-9.png) 24 fill repeat;
-			border-image-width: 24px;
-			border-image-outset: 6px;
-			padding: 0px 18px 0px 18px;
-			margin-top: 20px;
-			margin-bottom: 20px;
-			text-shadow: 0px 2px 1px #D5864F;
-			margin-left: 0;
-			margin-right: 0px;
-			background-color: #ffffff00;
-			filter: brightness(0.95) sepia(30%) saturate(80%);
-		}
-		.modal-content
-		{
-			position: relative;
-			display: flex;
+			color: #eb7647;
+                        font-size: 15px;
+			}
+.tag:before {
+    content: "🌻";
+    margin-right: 1px;
+}
+.textareabg{
+margin-top: 40px;
+        margin-bottom: 20px;
+        background-color: #ffffff00;
+        background-image: linear-gradient(to bottom, var(--TextBox-Background-Gradient-1), var(--TextBox-Background-Gradient-2));
+        box-shadow: var(--Pixel-border);
+        font-size: 10px;
+        display: flex;
+        filter: brightness(0.95) sepia(30%) saturate(80%);
+        font-family: 'Press Start 2P';
+        padding: 3% !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0px !important;
+}
+select {
+    background: #f0ca94;
+}
+.modal-content
+{
+position: relative;
+display: flex;
 			flex-direction: column;
 			width: 100%;
 			pointer-events: auto;
 			background-image: linear-gradient(to bottom, var(--TextBox-Background-Gradient-1), var(--TextBox-Background-Gradient-2));
-			box-shadow: rgb(144 62 1) 0px -3px, rgb(144 62 1) 0px 3px, rgb(144 62 1) 3px 0px, rgb(144 62 1) -3px 0px, rgb(144 62 1) -3px 0px, rgb(144 62 1) -3px 3px, rgb(144 62 1) -3px -3px, rgb(144 62 1) 3px -3px, rgb(144 62 1) 3px 3px, rgb(186 90 1) -3px -6px, rgb(186 90 1) 0px -6px, rgb(224 135 0) 3px -6px, rgb(186 90 1) 6px 0px, rgb(224 135 0) 6px -3px, rgb(186 90 1) 6px 3px, rgb(224 135 0) 0px 6px, rgb(186 90 1) 3px 6px, rgb(144 62 1) 6px 6px, rgb(186 90 2) -3px 6px, rgb(224 135 0) -6px 3px, rgb(144 62 1) -6px 6px, rgb(224 135 0) -6px 0px, rgb(186 90 1) -6px -3px, rgb(144 62 1) -6px -6px, rgb(144 62 1) 6px -6px, rgb(224 135 0) 6px -9px, rgb(224 135 0) 3px -9px, rgb(186 90 2) -6px -9px, rgb(91 43 42) 0px -12px, rgb(91 43 42) -6px -12px, rgb(91 43 42) 6px -12px, rgb(186 90 2) 0px 9px, rgb(186 90 2) -6px 9px, rgb(186 90 2) 6px 9px, rgb(186 90 2) -9px 6px, rgb(144 62 1) -9px 9px, rgb(186 90 2) -9px -6px, rgb(91 43 42) 0px 12px, rgb(91 43 42) 6px 12px, rgb(91 43 42) -6px 12px, rgb(144 62 1) -9px -9px, rgb(91 43 42) -12px 0px, rgb(91 43 42) -12px -6px, rgb(91 43 42) -12px 6px, rgb(224 135 0) 9px 0px, rgb(224 135 0) 9px 3px, rgb(186 90 2) 9px 6px, rgb(144 62 1) 9px 9px, rgb(224 135 0) 9px -6px, rgb(144 62 1) 9px -9px, rgb(91 43 42) 12px 6px, rgb(91 43 42) 12px -6px;
+			box-shadow: var(--Pixel-border);
 			border-right: calc(var(--TextBox-Border-Size) * 2) solid var(--TextBox-Border-Shadow);
 			border-top: calc(var(--TextBox-Border-Size) * 2) solid var(--TextBox-Border-Shadow);
-			/* background-color: #fff; */
 			background-clip: padding-box;
 			border: 1px solid rgba(0, 0, 0, 0.2);
 			border-radius: 0.3rem;
-			outline: 0;
+outline: 0;
 		}
-		.btn-outline-primary
-		{
-			color: #A5682A;
-			background-color: transparent;
-			background-image: none;
-			border-color: #A5682A;
-		}
-		.btn-outline-primary:hover
-		{
-			color: #FFF;
-			background-color: #f8fafc00;
-			border-color: #A5682A;
-		}
-		html>body.bodybg>#app>main.py-4>div:nth-of-type(2)>div.post-content>form
-		{
-			margin: 25px 10px 25px;
-			background-image: linear-gradient(to bottom, var(--TextBox-Background-Gradient-1), var(--TextBox-Background-Gradient-2));
-			border-right: calc(var(--TextBox-Border-Size) * 2) solid var(--TextBox-Border-Shadow);
-			border-top: calc(var(--TextBox-Border-Size) * 2) solid var(--TextBox-Border-Shadow);
-			overflow: auto;
-			box-shadow: rgb(144 62 1) 0px -3px, rgb(144 62 1) 0px 3px, rgb(144 62 1) 3px 0px, rgb(144 62 1) -3px 0px, rgb(144 62 1) -3px 0px, rgb(144 62 1) -3px 3px, rgb(144 62 1) -3px -3px, rgb(144 62 1) 3px -3px, rgb(144 62 1) 3px 3px, rgb(186 90 1) -3px -6px, rgb(186 90 1) 0px -6px, rgb(224 135 0) 3px -6px, rgb(186 90 1) 6px 0px, rgb(224 135 0) 6px -3px, rgb(186 90 1) 6px 3px, rgb(224 135 0) 0px 6px, rgb(186 90 1) 3px 6px, rgb(144 62 1) 6px 6px, rgb(186 90 2) -3px 6px, rgb(224 135 0) -6px 3px, rgb(144 62 1) -6px 6px, rgb(224 135 0) -6px 0px, rgb(186 90 1) -6px -3px, rgb(144 62 1) -6px -6px, rgb(144 62 1) 6px -6px, rgb(224 135 0) 6px -9px, rgb(224 135 0) 3px -9px, rgb(186 90 2) -6px -9px, rgb(91 43 42) 0px -12px, rgb(91 43 42) -6px -12px, rgb(91 43 42) 6px -12px, rgb(186 90 2) 0px 9px, rgb(186 90 2) -6px 9px, rgb(186 90 2) 6px 9px, rgb(186 90 2) -9px 6px, rgb(144 62 1) -9px 9px, rgb(186 90 2) -9px -6px, rgb(91 43 42) 0px 12px, rgb(91 43 42) 6px 12px, rgb(91 43 42) -6px 12px, rgb(144 62 1) -9px -9px, rgb(91 43 42) -12px 0px, rgb(91 43 42) -12px -6px, rgb(91 43 42) -12px 6px, rgb(224 135 0) 9px 0px, rgb(224 135 0) 9px 3px, rgb(186 90 2) 9px 6px, rgb(144 62 1) 9px 9px, rgb(224 135 0) 9px -6px, rgb(144 62 1) 9px -9px, rgb(91 43 42) 12px 6px, rgb(91 43 42) 12px -6px;
-			filter: brightness(0.95) sepia(30%) saturate(80%);
-		}
-		div.post-content.p-3
-		{
-			margin: 25px 10px 25px;
-			background-image: linear-gradient(to bottom, var(--TextBox-Background-Gradient-1), var(--TextBox-Background-Gradient-2));
-			border-right: calc(var(--TextBox-Border-Size) * 2) solid var(--TextBox-Border-Shadow);
-			border-top: calc(var(--TextBox-Border-Size) * 2) solid var(--TextBox-Border-Shadow);
-			overflow: auto;
-			box-shadow: rgb(144 62 1) 0px -3px, rgb(144 62 1) 0px 3px, rgb(144 62 1) 3px 0px, rgb(144 62 1) -3px 0px, rgb(144 62 1) -3px 0px, rgb(144 62 1) -3px 3px, rgb(144 62 1) -3px -3px, rgb(144 62 1) 3px -3px, rgb(144 62 1) 3px 3px, rgb(186 90 1) -3px -6px, rgb(186 90 1) 0px -6px, rgb(224 135 0) 3px -6px, rgb(186 90 1) 6px 0px, rgb(224 135 0) 6px -3px, rgb(186 90 1) 6px 3px, rgb(224 135 0) 0px 6px, rgb(186 90 1) 3px 6px, rgb(144 62 1) 6px 6px, rgb(186 90 2) -3px 6px, rgb(224 135 0) -6px 3px, rgb(144 62 1) -6px 6px, rgb(224 135 0) -6px 0px, rgb(186 90 1) -6px -3px, rgb(144 62 1) -6px -6px, rgb(144 62 1) 6px -6px, rgb(224 135 0) 6px -9px, rgb(224 135 0) 3px -9px, rgb(186 90 2) -6px -9px, rgb(91 43 42) 0px -12px, rgb(91 43 42) -6px -12px, rgb(91 43 42) 6px -12px, rgb(186 90 2) 0px 9px, rgb(186 90 2) -6px 9px, rgb(186 90 2) 6px 9px, rgb(186 90 2) -9px 6px, rgb(144 62 1) -9px 9px, rgb(186 90 2) -9px -6px, rgb(91 43 42) 0px 12px, rgb(91 43 42) 6px 12px, rgb(91 43 42) -6px 12px, rgb(144 62 1) -9px -9px, rgb(91 43 42) -12px 0px, rgb(91 43 42) -12px -6px, rgb(91 43 42) -12px 6px, rgb(224 135 0) 9px 0px, rgb(224 135 0) 9px 3px, rgb(186 90 2) 9px 6px, rgb(144 62 1) 9px 9px, rgb(224 135 0) 9px -6px, rgb(144 62 1) 9px -9px, rgb(91 43 42) 12px 6px, rgb(91 43 42) 12px -6px;
-			filter: brightness(0.95) sepia(30%) saturate(80%);
-		}
-		div.left-menu
-		{
-			font-family: "titlefont";
-			border: 0px;
-			margin-top: 10px;
-			overflow-y: hidden;
-			background-color: #FFC677;
-			box-shadow: rgb(144 62 1) 0px -3px, rgb(144 62 1) 0px 3px, rgb(144 62 1) 3px 0px, rgb(144 62 1) -3px 0px, rgb(144 62 1) -3px 0px, rgb(144 62 1) -3px 3px, rgb(144 62 1) -3px -3px, rgb(144 62 1) 3px -3px, rgb(144 62 1) 3px 3px, rgb(186 90 1) -3px -6px, rgb(186 90 1) 0px -6px, rgb(224 135 0) 3px -6px, rgb(186 90 1) 6px 0px, rgb(224 135 0) 6px -3px, rgb(186 90 1) 6px 3px, rgb(224 135 0) 0px 6px, rgb(186 90 1) 3px 6px, rgb(144 62 1) 6px 6px, rgb(186 90 2) -3px 6px, rgb(224 135 0) -6px 3px, rgb(144 62 1) -6px 6px, rgb(224 135 0) -6px 0px, rgb(186 90 1) -6px -3px, rgb(144 62 1) -6px -6px, rgb(144 62 1) 6px -6px, rgb(224 135 0) 6px -9px, rgb(224 135 0) 3px -9px, rgb(186 90 2) -6px -9px, rgb(91 43 42) 0px -12px, rgb(91 43 42) -6px -12px, rgb(91 43 42) 6px -12px, rgb(186 90 2) 0px 9px, rgb(186 90 2) -6px 9px, rgb(186 90 2) 6px 9px, rgb(186 90 2) -9px 6px, rgb(144 62 1) -9px 9px, rgb(186 90 2) -9px -6px, rgb(91 43 42) 0px 12px, rgb(91 43 42) 6px 12px, rgb(91 43 42) -6px 12px, rgb(144 62 1) -9px -9px, rgb(91 43 42) -12px 0px, rgb(91 43 42) -12px -6px, rgb(91 43 42) -12px 6px, rgb(224 135 0) 9px 0px, rgb(224 135 0) 9px 3px, rgb(186 90 2) 9px 6px, rgb(144 62 1) 9px 9px, rgb(224 135 0) 9px -6px, rgb(144 62 1) 9px -9px, rgb(91 43 42) 12px 6px, rgb(91 43 42) 12px -6px;
-			border-right: calc(var(--TextBox-Border-Size) * 2) solid var(--TextBox-Border-Shadow);
-			border-top: calc(var(--TextBox-Border-Size) * 2) solid var(--TextBox-Border-Shadow);
-		}
-		.left-menu-text
-		{
-			color: var(--TextBox-Link-Color);
-		}
-		.post-row, .comment-row
-		{
-			display: flex;
-			padding: var(--TextBox-Text-Vertical-Padding) var(--TextBox-Text-Side-Padding);
-			box-sizing: border-box;
-			-webkit-box-sizing: border-box;
-			background-image: linear-gradient(to bottom, var(--TextBox-Background-Gradient-1), var(--TextBox-Background-Gradient-2));
-			border-right: calc(var(--TextBox-Border-Size) * 2) solid var(--TextBox-Border-Shadow);
-			border-top: calc(var(--TextBox-Border-Size) * 2) solid var(--TextBox-Border-Shadow);
-			overflow: auto;
-			box-shadow: rgb(144 62 1) 0px -3px, rgb(144 62 1) 0px 3px, rgb(144 62 1) 3px 0px, rgb(144 62 1) -3px 0px, rgb(144 62 1) -3px 0px, rgb(144 62 1) -3px 3px, rgb(144 62 1) -3px -3px, rgb(144 62 1) 3px -3px, rgb(144 62 1) 3px 3px, rgb(186 90 1) -3px -6px, rgb(186 90 1) 0px -6px, rgb(224 135 0) 3px -6px, rgb(186 90 1) 6px 0px, rgb(224 135 0) 6px -3px, rgb(186 90 1) 6px 3px, rgb(224 135 0) 0px 6px, rgb(186 90 1) 3px 6px, rgb(144 62 1) 6px 6px, rgb(186 90 2) -3px 6px, rgb(224 135 0) -6px 3px, rgb(144 62 1) -6px 6px, rgb(224 135 0) -6px 0px, rgb(186 90 1) -6px -3px, rgb(144 62 1) -6px -6px, rgb(144 62 1) 6px -6px, rgb(224 135 0) 6px -9px, rgb(224 135 0) 3px -9px, rgb(186 90 2) -6px -9px, rgb(91 43 42) 0px -12px, rgb(91 43 42) -6px -12px, rgb(91 43 42) 6px -12px, rgb(186 90 2) 0px 9px, rgb(186 90 2) -6px 9px, rgb(186 90 2) 6px 9px, rgb(186 90 2) -9px 6px, rgb(144 62 1) -9px 9px, rgb(186 90 2) -9px -6px, rgb(91 43 42) 0px 12px, rgb(91 43 42) 6px 12px, rgb(91 43 42) -6px 12px, rgb(144 62 1) -9px -9px, rgb(91 43 42) -12px 0px, rgb(91 43 42) -12px -6px, rgb(91 43 42) -12px 6px, rgb(224 135 0) 9px 0px, rgb(224 135 0) 9px 3px, rgb(186 90 2) 9px 6px, rgb(144 62 1) 9px 9px, rgb(224 135 0) 9px -6px, rgb(144 62 1) 9px -9px, rgb(91 43 42) 12px 6px, rgb(91 43 42) 12px -6px;
-			filter: brightness(0.95) sepia(30%) saturate(80%);
-		}
-		div.post-content.blog_total_counter
-		{
-			display: none;
-		}
-		div.blog__gifts > h3
-		{
-			display: none;
-		}
-		#app > main > div.left-menu > div.blog__gifts > div.right-menu-text > a
-		{
-			content: url(https://i1.beon.fun/55/16/1655/54/588354/image.png);
-			margin-top: 10px;
-			margin-left: 10px;
-			margin-bottom: 10px;
-			margin-top: 4px;
-			box-shadow: #D68F54 0px -4px, #FFDAA1 0px 4px, #D68F54 4px 0px, #FFDAA1 -4px 0px;
-			padding: 7px;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		.left-menu__gift
-		{
-			width: 25%;
-			padding: 3px;
-			text-align: center;
-			display: none;
-		}
-		#app > main > div.left-menu > div.blog__tags > h3
-		{
-			content: url(https://i1.beon.fun/55/16/1655/95/592895/Pierre-s_Missing_Stocklist.png);
-			max-width: 100px;
-			margin-left: -70px;
-			margin-top: 4px;
-			box-shadow: #D68F54 0px -4px, #FFDAA1 0px 4px, #D68F54 4px 0px, #FFDAA1 -4px 0px;
-			padding: 7px;
-			margin-right: 40px;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		.blog__tags
-		{
-			width: 200px;
-			align-items: flex-end;
-			display: flex;
-			align-content: flex-end;
-			flex-direction: column;
-		}
-		div.left-menu__user-notification.left-menu__unread-notifications > h3
-		{
-			display: none;
-		}
-		#app > main > div.left-menu > div.left-menu__user-notification.left-menu__unread-notifications > div
-		{
-			content: url (https://stardewcommunitywiki.com/mediawiki/images/archive/c/c2/20181004023118%21Quests_Icon.png);
-		}
-		#app > main > div.left-menu > div.left-menu__user-notification.left-menu__friends > h3
-		{
-			display: none;
-		}
-		.left-menu__friends_offline > h3
-		{
-			display: none;
-		}
-		#app > main > div.left-menu > div.left-menu__friends.left-menu__friends_offline > div
-		{
-			display: none;
-		}
-		#app > main > div.left-menu > div.left-menu__friends.left-menu__friends_offline > p
-		{
-			display: none;
-		}
-		#app > main > div.left-menu > div.left-menu__user-notification.left-menu__friends > div > a
-		{
-			display: none;
-		}
-		#app > main > div.left-menu > div.left-menu__user-notification.left-menu__friends > div > a
-		{
-			content: url(https://i1.beon.fun/55/16/1655/99/588399/Krobus_Happy-1.png);
-		}
-		#app > main > div.left-menu > div.left-menu__user-notification.left-menu__friends > p
-		{
-			display: none;
-		}
-		div.blog__about > h3
-		{
-			content: url(https://stardewcommunitywiki.com/mediawiki/images/a/a5/Stardrop.png);
-			margin-left: 100px;
-			margin-top: 10px;
-			margin-top: 4px;
-			box-shadow: #D68F54 0px -4px, #FFDAA1 0px 4px, #D68F54 4px 0px, #FFDAA1 -4px 0px;
-			padding: 7px;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		div.left-menu__user-notification.left-menu__unread-message> h3
-		{
-			margin-top: 10px;
-			margin-top: 4px;
-			box-shadow: #D68F54 0px -4px, #FFDAA1 0px 4px, #D68F54 4px 0px, #FFDAA1 -4px 0px;
-			padding: 7px;
-			content: url(https://i1.beon.fun/55/16/1655/10/588610/Speech_bubble-1.png);
-			margin-left: 80px;
-			margin-right: 100px;
-			margin-bottom: 30px;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		#app > main > div.left-menu > div.left-menu__user-notification.left-menu__unread-message > p
-		{
-			max-width: 200px;
-		}
-		div.notifications__comments > h3
-		{
-			content: "";
-			display: none;
-		}
-		#app > main > div.left-menu > div.notifications__comments.left-menu__user-notification > div > a
-		{
-			content: url(https://i1.beon.fun/55/16/1655/20/592920/20181004023118-Quests_Icon.png);
-			margin-right: 10px;
-			margin-left: 30px;
-			margin-top: 10px;
-			margin-bottom: 10px;
-			margin-top: 4px;
-			box-shadow: #D68F54 0px -4px, #FFDAA1 0px 4px, #D68F54 4px 0px, #FFDAA1 -4px 0px;
-			padding: 7px;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		#app > main > div.left-menu > div.notifications__comments.left-menu__user-notification > p
-		{
-			display: none;
-		}
-		.blog__gifts, .blog__tags,.left-menu__user-notification, .left-menu__friends_offline, div.left-menu__user-notification, .left-menu__friends, .left-menu__friends.left-menu__friends_offline, div.left-menu__user-notification.left-menu__unread-message, div.notifications__comments, div.blog__about
-		{
-			max-height: 73px;
-			overflow: hidden;
-			transition: 0.1s;
-			transition-delay: 10s;
-		}
-		.blog__gifts:active, .blog__tags:active, .left-menu__user-notification:active,div.left-menu__user-notification.left-menu__unread-message:active, .left-menu__friends, .left-menu__friends_offline:active, div.left-menu__user-notification.left-menu__friends:active, .left-menu__friends.left-menu__friends_offline:active,div.notifications__comments:active, div.blog__about:active
-		{
-			max-height: 600px;
-			transition: 0.1s;
-		}
-		#app > main > div.left-menu > div.left-menu__user-notification.left-menu__unread-notifications > div > a
-		{
-			content: url(https://stardewcommunitywiki.com/mediawiki/images/6/63/DialogueBubbleLove.png);
-			margin-right: 10px;
-			margin-left: 100px;
-			margin-bottom: 10px;
-			margin-top: -12px;
-			box-shadow: #D68F54 0px -4px, #FFDAA1 0px 4px, #D68F54 4px 0px, #FFDAA1 -4px 0px;
-			padding: 7px;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		input
-		{
-			overflow: visible;
-			box-shadow: #D68F54 0px -2px, #FFDAA1 0px 2px, #D68F54 2px 0px, #FFDAA1 -2px 0px;
-			margin-left: 10px;
-			margin-bottom: 5px;
-			background-color: #FFC677;
-			border: 0px;
-		}
-		#app > main > div.left-menu > div.left-menu__user-notification.left-menu__unread-message > p
-		{
-			margin-top: 10px;
-			margin-bottom: 0rem;
-		}
-		.datebg
-		{
-			margin: 10px 10px 20px;
-			padding-left: 5px;
-			font-weight: bold;
-			color: #F4B744;
-			font-size: 120%;
-			text-shadow: 0px 2px 1px #D5864F;
-		}
-		/**/
-		/**/
-		///фонфонфонфон/// body
-		{
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754679267475486/Stardew-Valley-Cursor.png"), auto;
-		}
-		a, .music-controls
-		{
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		a
-		{
-			color:var(--TextBox-Link-Color);
-			text-decoration: none;
-			-webkit-transition: all 0.1s ease-in-out;
-			-moz-transition: all 0.1s ease-in-out;
-			-o-transition: all 0.1s ease-in-out;
-		}
-		.post-text, .comment-text
-		{
-			word-break: break-word;
-			margin-top: 0px;
-			font-family: aseprite;
-			line-height: 25px;
-			font-size: 17px;
-			letter-spacing: 0.3px;
-			line-height: var(--Bio-Box-Line-Height);
-			/* max-height: var(--Bio-Box-Maximum-Height); */
-			overflow-y: auto;
-			color: var(--TextBox-Text-Color);
-			text-shadow: -1px 1px 1px var(--TextBox-Text-Shadow);
-		}
-		.post-content
-		{
-			margin: 25px 10px 25px;
-		}
-		div.post-content.blog_total_counter
-		{
-			display: none;
-		}
-		div.post-opt.col-12.col-md-6
-		{
-			margin-top: 25px;
-		}
-		.left-menu a:hover
-		{
-			color: #835463;
-		}
-		img.flag
-		{
-			height: 30px;
-			aspect-ratio: auto 30 / 30;
-			width: 30px;
-			content: url(https://stardewcommunitywiki.com/mediawiki/images/thumb/2/2b/Emojis110.png/24px-Emojis110.png);
-			vertical-align: text-bottom;
-			margin-left: -5px;
-		}
-		div.post-avatar
-		{
-			padding-top: 0px;
-			padding-left: 0px;
-			padding-right: 40px;
-			margin-right: 0px;
-			border-top-style: none;
-			border-right-style: none;
-			border-bottom-style: none;
-			border-left-style: none;
-			overflow-clip-margin: content-box;
-		}
-		.post-title, h1
-		{
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			border: 6px solid transparent;
-			border-image: url(https://i1.beon.fun/55/16/1655/26/595526/scrollborder.png) 24 fill repeat;
-			border-image-width: 24px;
-			border-image-outset: 6px;
-			padding: 0px 18px 0px 18px;
-			margin-top: 20px;
-			margin-bottom: 16px;
-			font-size: 16px;
-			margin-left: auto;
-			margin-right: auto;
-			height: 50px;
-			max-width: 500px;
-			text-align: center;
-		}
-		.post-title-user
-		{
-			margin-right: 0px;
-			padding-top: 0px;
-			line-height: 50px;
-		}
-		.user:before
-		{
-			content: "";
-			margin-right: 1px;
-		}
-		span[data-target="#deleteconfirmmodal"]
-		{
-			color: #3490DC;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-			content: "";
-			font-size: 0px;
+span[data-target="#deleteconfirmmodal"]{
+color: #3490DC;
+cursor: url(https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png), auto;
+content: "";
+font-size: 0px!important;
 		}
 		span[data-target="#deleteconfirmmodal"]:after
 		{
 			color: #3490DC;
 			content: url(https://i1.beon.fun/55/16/1655/5/596705/image-2.png);
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-			font-size: 0px;
 		}
-		.likebutton
-		{
-			color: #979696;
-			transition: color 0.5s ease;
-			width: 14px;
-			/* opacity: 60%; */
-			content: url(https://i1.beon.fun/55/16/1655/18/596618/image.png);
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-		}
-		.likebutton
+.likebutton
 		{
 			color: #979696;
 			transition: color 0.5s ease;
 			width: 14px;
 			content: url(https://i1.beon.fun/55/16/1655/18/596618/image.png);
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
+			cursor: url("https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png"), auto;
 		}
-		.liked, .reposted, .bookmarked
+.liked, .reposted, .bookmarked
 		{
 			color: #FF0000 !important;
 			content: url(https://i1.beon.fun/55/16/1655/4/596704/image-1.png);
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
+			cursor: url("https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png"), auto;
 		}
-		.fa-retweet:before
-		{
+.fa-retweet:before, .fa-heart:before, .fa-bookmark:before, .fa-trash-alt:before, .fa-exclamation-triangle:before, .fa-quote-left:before
+               {
 			content: "";
 		}
 		.fa-retweet:after
 		{
 			content: url(https://i1.beon.fun/55/16/1655/7/596707/image-5.png);
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
+			cursor: url("https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png"), auto;
 		}
-		[href$="/edit"]
+[href$="/edit"], a[href^="//beon.fun/repost/comment/"], a[href^="//beon.fun/repost/post/"], a[href^="//beon.fun/repost/topic/"]
 		{
 			content: "";
 			text-decoration: unset;
@@ -1840,253 +542,776 @@
 		[href$="/edit"]::after
 		{
 			content: url(https://i1.beon.fun/55/16/1655/5/603905/image-3.png);
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
+			cursor: url("https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png"), auto;
 			text-decoration: unset;
 		}
-		a[href^="//beon.fun/repost/comment/"]
-		{
-			font-size: 0px;
-			text-decoration: unset;
-		}
+		
 		a[href^="//beon.fun/repost/comment/"]::after
 		{
 			content: url(https://i1.beon.fun/55/16/1655/7/596707/image-5.png);
 			text-decoration: unset;
 			font-size: 0px;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
+			cursor: url("https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png"), auto;
 		}
-		a[href^="//beon.fun/repost/post/"]
-		{
+		
+                a[href^="//beon.fun/repost/topic/"]::after
+                  {
+                        content: url(https://i1.beon.fun/55/16/1655/7/596707/image-5.png);
 			font-size: 0px;
 			text-decoration: unset;
+			cursor: url("https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png"), auto;
 		}
 		a[href^="//beon.fun/repost/post/"]::after
 		{
 			content: url(https://i1.beon.fun/55/16/1655/7/596707/image-5.png);
 			font-size: 0px;
 			text-decoration: unset;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
+			cursor: url("https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png"), auto;
 		}
-		.fa-heart:before
-		{
-			content: "";
-		}
+		
 		.fa-heart:after
 		{
 			content: url(https://i1.beon.fun/55/16/1655/16/601716/image-6-1.png);
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
+			cursor: url("https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png"), auto;
 		}
-		.fa-bookmark:before
-		{
-			content: "";
-		}
+                
+		
 		.fa-bookmark:after
 		{
 			content: url(https://i1.beon.fun/55/16/1655/31/596731/image-8.png);
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
+			cursor: url("https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png"), auto;
 		}
-		.fa-trash-alt:before
-		{
-			content: "";
-		}
+               .fa-quote-left:after{
+               content: "❞";
+               font-size: 16px;
+               font-family: 'Press Start 2P';
+               }
+		
 		.fa-trash-alt:after
 		{
 			content: url(https://i1.beon.fun/55/16/1655/5/596705/image-2.png);
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
+			cursor: url("https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png"), auto;
 		}
-		.fa-exclamation-triangle:before
-		{
-			content: "";
-		}
+               
 		.fa-exclamation-triangle:after
 		{
 			content: url(https://i1.beon.fun/55/16/1655/30/596730/image-7.png);
+			cursor: url("https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png"), auto;
 		}
-		label.menu__btn
+              .fa-smile-wink:before {
+               content: url("https://i1.beon.fun/55/16/1655/67/1110567/36px-Emojis080-1.png");
+               width: 15px;
+               height: 15px;
+}
+a[href^="javascript:void(0);"]:not(.emj-dropdown-content a){ 
+width: 15px;
+display: inline-flex;
+height: 15px;}
+[src="//beon.fun/i/smiles/smile.png"] {
+content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/a/ad/Emojis000.png/36px-Emojis000.png);
+}
+[src="//beon.fun/i/smiles/sad.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/f/fb/Emojis012.png/36px-Emojis012.png);
+}
+[src="//beon.fun/i/smiles/big-smile.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/b/b2/Emojis002.png/36px-Emojis002.png);
+}
+[src="//beon.fun/i/smiles/kiss.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/8/81/Emojis006.png/36px-Emojis006.png);
+}
+[src="//beon.fun/i/smiles/wink.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/7/7f/Emojis005.png/36px-Emojis005.png);
+}
+[src="//beon.fun/i/smiles/surprised.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/d/dd/Emojis007.png/36px-Emojis007.png);
+}
+[src="//beon.fun/i/smiles/tongue-sticking-out.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/5/56/Emojis027.png/36px-Emojis027.png);
+}
+[src="//beon.fun/i/smiles/angry.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/a/a3/Emojis021.png/36px-Emojis021.png);
+}
+[src="//beon.fun/i/smiles/devil.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/f/fd/Emojis030.png/36px-Emojis030.png);
+}
+[src="//beon.fun/i/smiles/angel.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/7/74/Emojis022.png/36px-Emojis022.png);
+}
+[src="//beon.fun/i/smiles/cry.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/2/29/Emojis013.png/36px-Emojis013.png);
+}
+[src="//beon.fun/i/smiles/upset.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/6/66/Emojis017.png/36px-Emojis017.png);
+}
+[src="//beon.fun/i/smiles/confused.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/8/8a/Emojis011.png/36px-Emojis011.png);
+}
+[src="//beon.fun/i/smiles/undecided.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/5/5b/Emojis016.png/36px-Emojis016.png);
+}
+[src="//beon.fun/i/smiles/turn-red.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/f/f6/Emojis008.png/36px-Emojis008.png);
+}
+[src="//beon.fun/i/smiles/sun-glasses.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/2/27/Emojis025.png/36px-Emojis025.png);
+}
+[src="//beon.fun/i/smiles/thumbs-up.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/1/16/Emojis035.png/36px-Emojis035.png);
+}
+[src="//beon.fun/i/smiles/thumbs-down.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/c/c7/Emojis036.png/36px-Emojis036.png);
+}
+[src="//beon.fun/i/smiles/shocked.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/c/ce/Emojis020.png/36px-Emojis020.png);
+}
+[src="//beon.fun/i/smiles/shhh.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/8/89/Emojis028.png/36px-Emojis028.png);
+}
+[src="//beon.fun/i/smiles/crazy.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/9/96/Emojis024.png/36px-Emojis024.png);
+}
+[src="//beon.fun/i/smiles/tired.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/9/99/Emojis009.png/36px-Emojis009.png);
+}
+[src="//beon.fun/i/smiles/cunning.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/8/81/Emojis023.png/36px-Emojis023.png);
+}
+[src="//beon.fun/i/smiles/thinking.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/a/a5/Emojis019.png/36px-Emojis019.png);
+}
+}
+@media only screen and (max-width: 800px)
+	{
+/*--------------------Features--------------------*/
+		:root
 		{
-			margin-top: 16px !important;
+			--TextBox-Border-Shadow: #968e85;
+			--TextBox-Border-Size: 3px;
+                        --TextBox-Background: #ffcd82;
+			--TextBox-Background-Gradient-1: #ffcd82;
+			--TextBox-Background-Gradient-2: #eeb272;
+			--Pixel-border: rgb(144 62 1) 0px -3px, rgb(144 62 1) 0px 3px, rgb(144 62 1) 3px 0px, rgb(144 62 1) -3px 0px, rgb(144 62 1) -3px 0px, rgb(144 62 1) -3px 3px, rgb(144 62 1) -3px -3px, rgb(144 62 1) 3px -3px, rgb(144 62 1) 3px 3px, rgb(186 90 1) -3px -6px, rgb(186 90 1) 0px -6px, rgb(224 135 0) 3px -6px, rgb(186 90 1) 6px 0px, rgb(224 135 0) 6px -3px, rgb(186 90 1) 6px 3px, rgb(224 135 0) 0px 6px, rgb(186 90 1) 3px 6px, rgb(144 62 1) 6px 6px, rgb(186 90 2) -3px 6px, rgb(224 135 0) -6px 3px, rgb(144 62 1) -6px 6px, rgb(224 135 0) -6px 0px, rgb(186 90 1) -6px -3px, rgb(144 62 1) -6px -6px, rgb(144 62 1) 6px -6px, rgb(224 135 0) 6px -9px, rgb(224 135 0) 3px -9px, rgb(186 90 2) -6px -9px, rgb(91 43 42) 0px -12px, rgb(91 43 42) -6px -12px, rgb(91 43 42) 6px -12px, rgb(186 90 2) 0px 9px, rgb(186 90 2) -6px 9px, rgb(186 90 2) 6px 9px, rgb(186 90 2) -9px 6px, rgb(144 62 1) -9px 9px, rgb(186 90 2) -9px -6px, rgb(91 43 42) 0px 12px, rgb(91 43 42) 6px 12px, rgb(91 43 42) -6px 12px, rgb(144 62 1) -9px -9px, rgb(91 43 42) -12px 0px, rgb(91 43 42) -12px -6px, rgb(91 43 42) -12px 6px, rgb(224 135 0) 9px 0px, rgb(224 135 0) 9px 3px, rgb(186 90 2) 9px 6px, rgb(144 62 1) 9px 9px, rgb(224 135 0) 9px -6px, rgb(144 62 1) 9px -9px, rgb(91 43 42) 12px 6px, rgb(91 43 42) 12px -6px;
 		}
-		.hamburger-menu
+/*--------------------BG--------------------*/
+
+body {
+padding: 1%;
+    cursor: url(https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Cursor.png), auto;
+}
+
+.bodybg {
+    background: #F5E8D8 url(https://i.pinimg.com/originals/b2/29/1c/b2291c7633bcfe69cb7b3b7ba0d814ab.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+::-webkit-scrollbar
 		{
-			display: none;
+			width: 10px;
+			height: 10px;
+
 		}
-		.hamburger-menu
+		::-webkit-scrollbar-thumb
 		{
-			display: inline-block;
+			background: #9f542c;
+			cursor:url(https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png), auto;
 		}
-		#menu__toggle
+		::-webkit-scrollbar-track
 		{
-			opacity: 0;
-			display: none;
+margin: 1%;
+			background: #e8c7a0;
+			border: 4px solid #e8c7a0;
+box-shadow: #D68F54 0px -2px, #FFDAA1 0px 2px, #D68F54 2px 0px, #FFDAA1 -2px 0px;
+			background-clip: content-box;
+			cursor: cursor: url(https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Cursor.png), auto;
 		}
-		div.container
+a {
+    color: #a5682a;
+    cursor: url(https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png), auto;
+font-family: 'Press Start 2P';
+font-size: 12px;
+}
+a:hover{ 
+color: #eb7647;
+text-decoration: none;
+}
+::selection, .quotation{
+background: #eb7647;
+        width: fit-content;
+border-left: 3px solid #000000;}
+span {
+font-family: 'Press Start 2P';
+    font-size: 10px!important;
+}
+input {
+    overflow: visible;
+    box-shadow: #D68F54 0px -2px, #FFDAA1 0px 2px, #D68F54 2px 0px, #FFDAA1 -2px 0px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    background-color: #FFC677;
+    border: 0px;
+}
+input:focus {
+    outline: 0px dotted;
+    outline: 0px auto -webkit-focus-ring-color
+background-color: #f3e0c6;
+}
+button, input:hover {
+background: #eb7647;
+
+}
+[src="/i/logo2-deer.png"],  .user:before, #navbarSupportedContent > ul.navbar-nav.ml-auto > div > table > tbody > tr:nth-child(1) > td:nth-child(4) > ul > li > a:nth-child(2), div.post-content.blog_total_counter, body > div.bottombg > div.footer__infolinks.p-1, .left-menu br, [src="/i/user.png"], [src="/i/online.png"], [src="/i/offline.png"], [src="/i/blog.png"], .user:before, #page__admincontact, #page__rendertime, .pagination-goto{
+		display: none;
+	}
+.btn-outline-primary {font-size: 10px;
+border-color: #a5682a;
+color: #a5682a;}
+.btn-outline-primary:hover{ 
+color: #eb7647;}
+
+[src="//beon.fun/i/design-off.png"] {
+display: none;}
+a[href^="/design/disable"]{
+color: #eb7647!important;}
+a[href^="/design/disable"]:before{
+font-family: 'Font Awesome 5 Free';
+font-size: 16px;
+content: "\f070";}
+/*--------------------top-menu--------------------*/
+.navbar-light .navbar-brand, .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+    color: rgb(243 245 255);
+    text-shadow: 2px 2px 2px #6275c4, 0 0 2px #6275c4, 0 0 0.2px #6275c4;
+}
+.menu__box {
+    z-index: 1;
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 40px 0;
+    list-style: none;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition-duration: .25s;
+    border-image-source: url(https://i1.beon.fun/55/16/1655/59/1104359/Bezymyannyy.png);
+    border-style: solid;
+    background-image: url(https://i1.beon.fun/55/16/1655/48/1107648/plants_preview_0-1-1.png), url(https://stardewcommunitywiki.com/mediawiki/images/thumb/c/c1/Indoor_Hanging_Basket.png/24px-Indoor_Hanging_Basket.png);
+    background-repeat: no-repeat;
+    background-color: #e8c7a0;
+    border-image-slice: 13 13 13 13;
+    border-image-width: 13px 13px 8px 13px;
+    background-position: left bottom 5px, top 10px left 12px;
+}
+.menu__btn {
+display: flex;
+    align-items: center;
+    margin: auto !important;
+    position: fixed;
+    background: #0000007d url(https://stardewvalleywiki.com/mediawiki/images/thumb/0/01/Night_Sky_Decal_2.png/27px-Night_Sky_Decal_2.png);
+    right: 20px;
+    height: 35px;
+    top: 10px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    width: 35px;
+    background-position: center right;
+}
+.menu__btn > span, .menu__btn > span::before, .menu__btn > span::after {
+        background-color: #00000000;
+     }
+
+a.my-menu.for-mobile.mobile-scroll-down.d-inline.d-md-none{
+background: url(https://stardewvalleywiki.com/mediawiki/images/3/34/Night_Sky_Decal_1.png) no-repeat center / 30px;
+        width: 35px;
+        height: 35px;
+        position: fixed;
+        right: 65px;
+        top: 10px;
+        font-size: 0;
+        z-index: 3;
+}
+[style="float:right;cursor:pointer;text-shadow: 1px 1px 1px white;"], a.my-menu.for-mobile.d-none.d-md-inline {
+    background: url(https://stardewvalleywiki.com/mediawiki/images/thumb/f/f4/Night_Sky_Decal_3.png/27px-Night_Sky_Decal_3.png) no-repeat center / contain;
+    position: fixed;
+    bottom: 5px;
+    right: 0;
+width: 40px;
+        font-size: 0px !important;
+        height: 60px;
+}
+
+
+.pc-menu a {
+    font-size: 7px;
+padding: 3px!important;
+}
+.pc-menu a:hover {
+    transition: 0.5s;
+color: #eb7647!important;
+    transition: 0.5s;
+ box-shadow: inset 200px 0 0 0 #ffffffa6;
+text-decoration: none;
+}
+.bg-white {
+    background-color: #fff0;
+}
+.m2 {
+display:none;
+}
+
+/*--------------------Crumbs--------------------*/
+
+/*Pagination*/
+.pagination {
+    margin-bottom: 20px;
+        border-radius: unset;
+        border-image-slice: 13 13 13 13 fill;
+        border-image-width: 13px 13px 13px 13px;
+        border-image-repeat: round round;
+        justify-content: center;
+        border-image-source: url(https://i1.beon.fun/55/16/1655/59/1104359/Bezymyannyy.png);
+        border-style: solid;
+        font-size: 12px;
+        padding: 10px 10px 5px 5px;
+        place-items: flex-end;
+        align-items: center;
+        width: 100%;
+}
+.pagination a:last-child
 		{
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			flex-direction: column-reverse;
+			font-size: 0px;	}
+		
+		.pagination a:last-child:before
+		{
+			content: ">";
+			font-size: 12px;
 		}
-		#menu__toggle:checked ~ .menu__box
+span.pagination-goto+a
 		{
-			visibility: visible;
-			right: 0;
-			height: auto;
-			background-image: url(https://i1.beon.fun/55/16/1655/78/596478/image.png);
-			background-size: cover;
-			background-color: #ffffff00;
-			box-shadow: none;
-			align-items: center;
-			display: flex;
+			font-size: 0px!important;
+                 }
+                span.pagination-goto+a:before
+		{
+			content: "<";
+	                font-size: 12px;
+
+		         }
+div.crumbs {
+    margin-top: 0px!important;
+    margin-bottom: 12px;
+    margin-left: auto;
+color: white;
+font-family: 'Press Start 2P';
+}
+div.crumbs a {
+font-family: 'Press Start 2P';
+font-size: 12px;
+}
+span.crumb-item {display: none;}
+/*--------------------.py-4--------------------*/
+.py-4 {
+    display: flex;
+}
+
+/*--------------------left-menu--------------------*/
+.mw-100 {
+    max-width: 100% !important;
+    border-image-slice: 82 97 71 91 fill;
+    border-image-width: 20px 20px 20px 20px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: stretch stretch;
+    border-image-source: url(https://64.media.tumblr.com/0ffd3c909afebedbafbff2179cae8e01/tumblr_p67k43nmo21x8f1hxo1_640.png);
+    border-style: solid;
+    padding: 20px 20px 15px 20px;
+}
+a,#beon-fnplayer, h3,  input {
+    cursor: url(https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png), auto;
+}
+ div.mobile_open_menu {
+        display: block;
+        border-image-slice: 13 13 13 13 fill;
+        border-image-width: 13px 13px 13px 13px;
+        border-image-repeat: round round;
+        border-image-source: url(https://i1.beon.fun/55/16/1655/59/1104359/Bezymyannyy.png);
+        border-style: solid;
+        color: white;
+        padding: 15px 0px 5px 5px;
+    }
+div.left-menu {
+   font-family: 'Press Start 2P';
+    border: 0px solid;
+    text-align: start;
+margin-right: 5%;
+    display: flex;
+    font-size: x-small;
+    flex-direction: column;
+}
+ .left-menu a,  .blog__tags a {
+font-size: 10px!important;}
+
+h3.left-menu-text {
+    font-size: 16px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+.left-menu h3 {
+font-size: 14px;
+}
+.left-menu__gift a{
+font-size: 8px !important;}
+ div.blog__tags > h3:before{
+ margin-right: 5px;
+content:url(https://i1.beon.fun/55/16/1655/6/1110506/36px-Solar_Essence-1.png);
+}
+div.blog__read-me > h3:before{
+ margin-right: 5px;
+content:url();}
+div.blog__iread > h3:before{
+ margin-right: 5px;
+content:url();}
+div.blog__last-comments > h3:before{
+ margin-right: 5px;
+content:url();}
+
+div.blog__gifts > h3:before{
+ margin-right: 10px;
+content: url(https://i1.beon.fun/55/16/1655/17/1104217/Gift_Icon-1.png);
+}
+ div.blog__about > h3:before{
+margin-right: 5px;
+content: url("");
+}
+ div.left-menu__user-notification.left-menu__friends > h3:before, #app > main > div.left-menu > div.left-menu__friends.left-menu__friends_offline>h3:before{
+margin-right: 5px;
+content: url(https://i1.beon.fun/55/16/1655/60/1110460/36px-Sunflower-2.png);
+
+}
+ div.left-menu__user-notification.left-menu__unread-notifications > h3:before{
+margin-right: 5px;
+content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/6/63/DialogueBubbleLove.png/24px-DialogueBubbleLove.png);
+}
+div.notifications__comments > h3:before{
+margin-right: 5px;
+content: url(https://i1.beon.fun/55/16/1655/59/1104259/Speech_bubble-1-1.png);
+}
+
+.blog__gifts, .blog__tags,.left-menu__user-notification, .left-menu__friends_offline, div.left-menu__user-notification, .left-menu__friends, .left-menu__friends.left-menu__friends_offline, div.left-menu__user-notification.left-menu__unread-message, div.notifications__comments,  div.community__moders,  div.community__members, div.blog__read-me, div.blog__iread,  div.blog__last-comments{height:45px;
+
+			overflow: hidden;
+			transition: 0.1s;
+			transition-delay: 10s;
+border-image-slice: 13 13 13 13 fill;
+        border-image-width: 13px 13px 13px 13px;
+        border-image-repeat: round round;
+        border-image-source: url(https://i1.beon.fun/55/16/1655/59/1104359/Bezymyannyy.png);
+        border-style: solid;
+        padding: 13px 13px 13px 13px;
+		}
+
+		.blog__gifts:active, .blog__tags:active, .left-menu__user-notification:active,div.left-menu__user-notification.left-menu__unread-message:active, .left-menu__friends, .left-menu__friends_offline:active, div.left-menu__user-notification.left-menu__friends:active, .left-menu__friends.left-menu__friends_offline:active,div.notifications__comments:active, div.blog__about:active, div.community__moders:active, div.community__members:active, div.blog__read-me:active,div.blog__iread:active, div.blog__last-comments:active
+		{height: 100%;
+			max-height: 100%;
+			transition: 0.1s;
+transition: all 1s ease-in;
+		}
+div.blog__about {border-image-slice: 13 13 13 13 fill;
+        border-image-width: 13px 13px 13px 13px;
+        border-image-repeat: round round;
+        border-image-source: url(https://i1.beon.fun/55/16/1655/59/1104359/Bezymyannyy.png);
+        border-style: solid;
+        padding: 13px 13px 13px 13px;}
+
+ div.left-menu__user-notification.left-menu__unread-message > h3:before {
+content: url(https://i1.beon.fun/55/16/1655/87/1104487/Mail-1.png);
+}
+ div.left-menu__user-notification.left-menu__unread-message > p, div.blog__last-comments a , div.blog__iread a  {margin-top: 20px;}
+/*player*/
+#fnplayer-volume-mask {
+    border-color: #e8c7a0 transparent transparent transparent;
+}
+#fnplayer-play {
+    border-color: transparent transparent transparent #eb7647;
+}
+
+#fnplayer-stop {
+    background: #eb7647;
+}
+#beon-fnplayer {
+    background-color: #e8c7a0;
+box-shadow: #D68F54 0px -2px, #FFDAA1 0px 2px, #D68F54 2px 0px, #FFDAA1 -2px 0px;
+}
+#fnplayer-volume-inner {
+    background-color: #eb7647;
+    border: 1px solid #eb7647;
+}
+#fnplayer-slider {
+    background-color: #eb7647;
+}
+#fnplayer-slider-inner {
+    background-color: #e8c7a0;
+}
+
+/*--------------------content--------------------*/
+
+.datebg {
+    color: white!important;
+font-size: 12px;
+font-family: 'Press Start 2P';
+}
+    
+img.flag {
+    height: 15px;
+    width: 15px;
+    content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/9/97/Emojis098.png/36px-Emojis098.png);
+    vertical-align: baseline;
+    margin-left: 5px;
+}
+
+/*post-content-comment*/
+
+.post-title-user
+{ text-decoration:none;
+font-size: 11px;
+line-height: 55px;
+}
+.post-header {
+font-size: 9px!important;}
+.post-title-date, {
+    color: #bdafaf;
+    padding-left: 1rem;
+    font-family: 'Press Start 2P';
+}
+.col-md-6 {
+        margin-top: 10px;
+    }
+ .post__tags-list {
+    color: #666666;
+    margin-bottom: 10px;
+}
+    span.comments_count span {
+        font-family: 'Press Start 2P';
+font-size: 0 !important;
+    }
+span.comments_count span::before {
+        padding: 0.3rem;
+        content: url(https://i1.beon.fun/55/16/1655/69/1110869/Speech_bubble-1-1.png);
+    }
+.post-title, .post-text, .comment-text, h1 {
+    word-break: break-word;
+    font-weight: bold;
+}
+.post-content, .comment-content{
+background: url(https://i1.beon.fun/55/16/1655/11/1110311/image-17.png), url(https://glen-themes.gitlab.io/abt-pages/15/imgs/bg_pattern.png);
+    box-shadow: var(--Pixel-border);
+border-right: calc(var(--TextBox-Border-Size) * 2) solid var(--TextBox-Border-Shadow);
+border-top: calc(var(--TextBox-Border-Size) * 2) solid var(--TextBox-Border-Shadow);
+    background-clip: padding-box;
+    padding: 1%;
+margin-top: 60px !important;
+        background-position: top left, center center;
+margin: 70px 0px 20px !important;
+background-repeat:  no-repeat, repeat;
+}
+.comment-content {
+background: url(https://i1.beon.fun/55/16/1655/70/1110570/image-17.png), url(https://glen-themes.gitlab.io/abt-pages/15/imgs/bg_pattern.png);
+background-repeat:  no-repeat, repeat;
+        background-position: top right, center center;}
+.post-title, h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 6px solid transparent;
+    border-image: url(https://i1.beon.fun/55/16/1655/1/1110201/output-onlinepngtools-11.png) 24 fill repeat;
+    border-image-width: 24px;
+    border-image-outset: 6px;
+      padding: 0px 18px 0px 18px !important;
+        margin-top: 20%;
+font-size: 11px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    max-width: fit-content;
+    text-align: center;
+text-decoration: none;
+filter: brightness(0.95) sepia(30%) saturate(80%);
+}
+div.comment-header{
+margin-top: 10%;}
+a.post-title:hover
+		{
+			color: #eb7647;
+			}
+.tag:before {
+    content: "🌻";
+    margin-right: 1px;
+}
+.textareabg{
+margin-top: 40px;
+        margin-bottom: 20px;
+        background-color: #ffffff00;
+        background-image: linear-gradient(to bottom, var(--TextBox-Background-Gradient-1), var(--TextBox-Background-Gradient-2));
+        box-shadow: var(--Pixel-border);
+        font-size: 10px;
+        display: flex;
+        filter: brightness(0.95) sepia(30%) saturate(80%);
+        font-family: 'Press Start 2P';
+        padding: 3% !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0px !important;
+}
+select {
+    background: #f0ca94;
+}
+.modal-content
+{
+position: relative;
+display: flex;
 			flex-direction: column;
-		}
-		.menu__btn
-		{
-			display: flex;
-			align-items: center;
-			position: relative;
-			width: 26px;
-			height: 26px;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
-			z-index: 2;
-		}
-		.menu__btn > span, .menu__btn > span::before, .menu__btn > span::after
-		{
-			display: block;
 			width: 100%;
-			height: 2px;
-			background-color: #00000000;
-			transition-duration: 0.25s;
+			pointer-events: auto;
+			background-image: linear-gradient(to bottom, var(--TextBox-Background-Gradient-1), var(--TextBox-Background-Gradient-2));
+			box-shadow: var(--Pixel-border);
+			border-right: calc(var(--TextBox-Border-Size) * 2) solid var(--TextBox-Border-Shadow);
+			border-top: calc(var(--TextBox-Border-Size) * 2) solid var(--TextBox-Border-Shadow);
+			background-clip: padding-box;
+			border: 1px solid rgba(0, 0, 0, 0.2);
+			border-radius: 0.3rem;
+outline: 0;
 		}
-		.menu__btn > span::before
+span[data-target="#deleteconfirmmodal"]{
+color: #3490DC;
+cursor: url(https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png), auto;
+content: "";
+font-size: 0px!important;
+		}
+		span[data-target="#deleteconfirmmodal"]:after
 		{
-			content: '';
-			top: -8px;
+			color: #3490DC;
+			content: url(https://i1.beon.fun/55/16/1655/5/596705/image-2.png);
 		}
-		.menu__btn > span::after
+.likebutton
 		{
-			content: '';
-			top: 8px;
+			color: #979696;
+			transition: color 0.5s ease;
+			width: 14px;
+			content: url(https://i1.beon.fun/55/16/1655/18/596618/image.png);
+			cursor: url("https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png"), auto;
 		}
-		.menu__box
+.liked, .reposted, .bookmarked
 		{
-			z-index: 1;
-			display: block;
-			position: fixed;
-			visibility: hidden;
-			top: 0;
-			right: -100%;
-			width: 300px;
-			height: 100%;
-			margin: 0;
-			padding: 40px 0;
-			list-style: none;
-			background-color: #ECEFF1;
-			box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
-			transition-duration: 0.25s;
+			color: #FF0000 !important;
+			content: url(https://i1.beon.fun/55/16/1655/4/596704/image-1.png);
+			cursor: url("https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png"), auto;
 		}
-		.menu__item
+.fa-retweet:before, .fa-heart:before, .fa-bookmark:before, .fa-trash-alt:before, .fa-exclamation-triangle:before
+               {
+			content: "";
+		}
+		.fa-retweet:after
 		{
-			display: block;
-			padding: 3px 18px 3px 24px;
-			text-align: right;
-			color: #333;
-			font-family: 'Roboto', sans-serif;
-			font-size: 14px;
-			font-weight: 600;
-			text-decoration: none;
-			transition-duration: 0.25s;
+			content: url(https://i1.beon.fun/55/16/1655/7/596707/image-5.png);
+			cursor: url("https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png"), auto;
 		}
-		a.menu__item:hover
+[href$="/edit"], a[href^="//beon.fun/repost/comment/"], a[href^="//beon.fun/repost/post/"], a[href^="//beon.fun/repost/topic/"]
 		{
-			background-color: #d7864f00;
-			text-decoration: none;
-			filter: drop-shadow(0 0 0.75rem rgb(255, 217, 0));
+			content: "";
+			text-decoration: unset;
+			font-size: 0px;
 		}
-		#navbarSupportedContent > ul.navbar-nav.ml-auto > div
+		[href$="/edit"]::after
 		{
-			display: none;
+			content: url(https://i1.beon.fun/55/16/1655/5/603905/image-3.png);
+			cursor: url("https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png"), auto;
+			text-decoration: unset;
 		}
-		html > body.bodybg > #app > nav.navbar.navbar-expand-md.navbar-light.bg-white.shadow-sm
+		
+		a[href^="//beon.fun/repost/comment/"]::after
 		{
-			width: 100%;
-			background-size: cover;
-			background-repeat: no-repeat;
-			margin-left: 0px;
-			height: 100%;
-			background-color: #f5f5dc00;
+			content: url(https://i1.beon.fun/55/16/1655/7/596707/image-5.png);
+			text-decoration: unset;
+			font-size: 0px;
+			cursor: url("https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png"), auto;
 		}
-		html>body.bodybg>#app>nav.navbar.navbar-expand-md.navbar-light.bg-white.shadow-sm>div.container>div:nth-of-type(2)>label.menu__btn
+		
+                a[href^="//beon.fun/repost/topic/"]::after
+                  {
+                        content: url(https://i1.beon.fun/55/16/1655/7/596707/image-5.png);
+			font-size: 0px;
+			text-decoration: unset;
+			cursor: url("https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png"), auto;
+		}
+		a[href^="//beon.fun/repost/post/"]::after
 		{
-			background-image: url("https://i1.beon.fun/55/16/1655/11/595011/Golden_Scroll.png");
-			background-size: contain;
-			margin-left: 0px;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
+			content: url(https://i1.beon.fun/55/16/1655/7/596707/image-5.png);
+			font-size: 0px;
+			text-decoration: unset;
+			cursor: url("https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png"), auto;
 		}
-		html>body.bodybg>#app>nav.navbar.navbar-expand-md.navbar-light.bg-white.shadow-sm>div.container>div:nth-of-type(2)>label.menu__btn:hover
+		
+		.fa-heart:after
 		{
-			background-image: url("https://i1.beon.fun/55/16/1655/11/595011/Golden_Scroll.png");
-			background-size: contain;
-			margin-left: 0px;
-			animation: pulse 1s linear infinite;
-			margin-left: -370px;
-			margin-right: 0px;
-			width: 50px;
-			max-width: 50px;
-			height: 50px;
-			max-height: 50px;
-			margin-top: 0px;
-			margin-bottom: 30px;
-			padding-bottom: 0px;
-			padding-top: 8px;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
+			content: url(https://i1.beon.fun/55/16/1655/16/601716/image-6-1.png);
+			cursor: url("https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png"), auto;
 		}
-		html > body.bodybg > #app > nav.navbar.navbar-expand-md.navbar-light.bg-white.shadow-sm > div.container > div:nth-of-type(2) > label.menu__btn
+                
+		
+		.fa-bookmark:after
 		{
-			margin-left: -370px;
-			margin-right: 0px;
-			width: 50px;
-			max-width: 50px;
-			height: 50px;
-			max-height: 50px;
-			margin-top: 0px;
-			margin-bottom: 30px;
-			padding-bottom: 0px;
-			padding-top: 8px;
-			font-weight: 400;
-			text-decoration-line: none;
-			cursor: url("//cdn.discordapp.com/attachments/900692000364445736/900754739732574329/Stardew-Valley-Hand.png"), auto;
+			content: url(https://i1.beon.fun/55/16/1655/31/596731/image-8.png);
+			cursor: url("https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png"), auto;
 		}
-		@-webkit-keyframes "pulse"
+               
+		
+		.fa-trash-alt:after
 		{
-			0%
-			{
-				-webkit-transform: scale(1.1);
-				transform: scale(1.1);
-			}
-			50%
-			{
-				-webkit-transform: scale(0.8);
-				transform: scale(0.8);
-			}
-			100%
-			{
-				-webkit-transform: scale(1);
-				transform: scale(1);
-			}
-			.navbar-expand-md>.container, .navbar-expand-md>.container-fluid
-			{
-				flex-wrap: nowrap;
-				padding: 0px;
-				margin-left: 0px;
-			}
-			.crumbs
-			{
-				margin-top: 50px;
-				margin-bottom: 10px;
-			}
-			.post-row, .comment-row
-			{
-				display: flex;
-				margin-top: 20px;
-			}
+			content: url(https://i1.beon.fun/55/16/1655/5/596705/image-2.png);
+			cursor: url("https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png"), auto;
 		}
+               
+		.fa-exclamation-triangle:after
+		{
+			content: url(https://i1.beon.fun/55/16/1655/30/596730/image-7.png);
+			cursor: url("https://glen-themes.gitlab.io/abt-pages/15/imgs/Stardew-Valley-Hand.png"), auto;
+		}
+              .fa-smile-wink:before {
+               content: url("https://i1.beon.fun/55/16/1655/67/1110567/36px-Emojis080-1.png");
+               width: 15px;
+               height: 15px;
+}
+a[href^="javascript:void(0);"]:not(.emj-dropdown-content a){ 
+width: 15px;
+display: inline-flex;
+height: 15px;}
+[src="//beon.fun/i/smiles/smile.png"] {
+content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/a/ad/Emojis000.png/36px-Emojis000.png);
+}
+[src="//beon.fun/i/smiles/sad.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/f/fb/Emojis012.png/36px-Emojis012.png);
+}
+[src="//beon.fun/i/smiles/big-smile.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/b/b2/Emojis002.png/36px-Emojis002.png);
+}
+[src="//beon.fun/i/smiles/kiss.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/8/81/Emojis006.png/36px-Emojis006.png);
+}
+[src="//beon.fun/i/smiles/wink.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/7/7f/Emojis005.png/36px-Emojis005.png);
+}
+[src="//beon.fun/i/smiles/surprised.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/d/dd/Emojis007.png/36px-Emojis007.png);
+}
+[src="//beon.fun/i/smiles/tongue-sticking-out.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/5/56/Emojis027.png/36px-Emojis027.png);
+}
+[src="//beon.fun/i/smiles/angry.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/a/a3/Emojis021.png/36px-Emojis021.png);
+}
+[src="//beon.fun/i/smiles/devil.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/f/fd/Emojis030.png/36px-Emojis030.png);
+}
+[src="//beon.fun/i/smiles/angel.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/7/74/Emojis022.png/36px-Emojis022.png);
+}
+[src="//beon.fun/i/smiles/cry.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/2/29/Emojis013.png/36px-Emojis013.png);
+}
+[src="//beon.fun/i/smiles/upset.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/6/66/Emojis017.png/36px-Emojis017.png);
+}
+[src="//beon.fun/i/smiles/confused.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/8/8a/Emojis011.png/36px-Emojis011.png);
+}
+[src="//beon.fun/i/smiles/undecided.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/5/5b/Emojis016.png/36px-Emojis016.png);
+}
+[src="//beon.fun/i/smiles/turn-red.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/f/f6/Emojis008.png/36px-Emojis008.png);
+}
+[src="//beon.fun/i/smiles/sun-glasses.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/2/27/Emojis025.png/36px-Emojis025.png);
+}
+[src="//beon.fun/i/smiles/thumbs-up.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/1/16/Emojis035.png/36px-Emojis035.png);
+}
+[src="//beon.fun/i/smiles/thumbs-down.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/c/c7/Emojis036.png/36px-Emojis036.png);
+}
+[src="//beon.fun/i/smiles/shocked.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/c/ce/Emojis020.png/36px-Emojis020.png);
+}
+[src="//beon.fun/i/smiles/shhh.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/8/89/Emojis028.png/36px-Emojis028.png);
+}
+[src="//beon.fun/i/smiles/crazy.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/9/96/Emojis024.png/36px-Emojis024.png);
+}
+[src="//beon.fun/i/smiles/tired.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/9/99/Emojis009.png/36px-Emojis009.png);
+}
+[src="//beon.fun/i/smiles/cunning.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/8/81/Emojis023.png/36px-Emojis023.png);
+}
+[src="//beon.fun/i/smiles/thinking.png"]{ content: url(https://stardewvalleywiki.com/mediawiki/images/thumb/a/a5/Emojis019.png/36px-Emojis019.png);
+}
+span.comments_count a {
+        font-size: 0.8rem;
+    }
+}
